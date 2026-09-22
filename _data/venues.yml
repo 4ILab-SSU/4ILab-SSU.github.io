@@ -1,0 +1,33 @@
+# Research-area badges shown next to each publication.
+# The key must match the `abbr = {...}` field in _bibliography/papers.bib.
+# Add a new area here first, then use it in the .bib file.
+
+"MI":
+  name: Medical Imaging
+  color: "#1e6fb8"
+  url: /research/#medical-imaging
+
+"IP":
+  name: Image Processing & Vision
+  color: "#0f8b6a"
+  url: /research/#natural-image-processing
+
+"ML":
+  name: Multimodal Learning & Retrieval
+  color: "#7a3fb8"
+  url: /research/#multimodal
+
+"AP":
+  name: Audio & Speech Processing
+  color: "#c2560f"
+  url: /research/#speech-signal-processing
+
+"LP":
+  name: Language Processing
+  color: "#b8231e"
+  url: /research/#multimodal
+
+"DD":
+  name: Deepfake Detection
+  color: "#444444"
+  url: /research/#deepfake-detection

@@ -1,0 +1,12 @@
+{
+  "name": "4ilab-ssu-website",
+  "private": true,
+  "description": "4ILab (Soongsil University) lab website built with Jekyll + al-folio",
+  "scripts": {
+    "lint": "node scripts/validate.js"
+  },
+  "devDependencies": {
+    "js-yaml": "^5.4.2",
+    "purgecss": "^8.0.0"
+  }
+}

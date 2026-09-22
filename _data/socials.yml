@@ -1,0 +1,8 @@
+# Social / contact icons shown at the bottom of the home page and in the footer.
+# Keys are those supported by the jekyll-socials plugin: https://github.com/george-gca/jekyll-socials
+email: yoseob.han@ssu.ac.kr
+scholar_userid: awRbnvQAAAAJ # Google Scholar ID of Prof. Yoseob Han
+github_username: 4ILab-SSU
+linkedin_username: yoseob-han-650988127
+youtube_id: "@hanyoseob"
+rss_icon: false

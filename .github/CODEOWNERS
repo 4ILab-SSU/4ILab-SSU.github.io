@@ -1,0 +1,11 @@
+# Reviewers automatically requested on pull requests.
+# Lines later in the file take precedence.
+# Syntax: <path pattern>  @user-or-team
+
+# Everything: lab PI
+*                         @hanyoseob
+
+# Content that students update themselves — add a "website maintainers" team here, e.g.:
+# _data/members.yml       @4ILab-SSU/web-maintainers
+# _news/                  @4ILab-SSU/web-maintainers
+# _bibliography/          @4ILab-SSU/web-maintainers

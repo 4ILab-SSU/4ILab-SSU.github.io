@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 📖 편집 가이드 (How to update the website)
+    url: https://github.com/4ILab-SSU/4ILab-SSU.github.io/blob/main/docs/HOWTO.md
+    about: 논문·멤버·뉴스 추가 방법이 정리되어 있습니다. 직접 PR을 보내는 것이 가장 빠릅니다.

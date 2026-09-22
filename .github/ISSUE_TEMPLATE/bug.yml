@@ -1,0 +1,17 @@
+name: "🐛 사이트 오류 (Bug / broken link)"
+description: 깨진 링크, 잘못된 표시, 빌드 실패 등
+title: "[bug] "
+labels: [bug]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: 문제가 있는 페이지 URL
+    validations:
+      required: true
+  - type: textarea
+    id: desc
+    attributes:
+      label: 무엇이 잘못되었나요? (스크린샷 환영)
+    validations:
+      required: true

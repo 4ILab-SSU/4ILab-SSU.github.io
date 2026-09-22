@@ -1,0 +1,468 @@
+/*******************************************************************************
+ * 4ILab site-specific components.
+ * Everything here uses the theme's CSS variables so it follows light/dark mode.
+ ******************************************************************************/
+
+// ---------------------------------------------------------------------------
+// Home page
+// ---------------------------------------------------------------------------
+.lab-hero {
+  margin: 0.5rem 0 2rem;
+
+  .lab-hero-name {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--global-theme-color);
+    letter-spacing: 0.02em;
+  }
+  .lab-hero-lead {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-top: 0.75rem;
+  }
+  .lab-hero-actions {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
+
+.lab-btn {
+  display: inline-block;
+  padding: 0.45rem 1rem;
+  border: 1px solid var(--global-theme-color);
+  border-radius: 999px;
+  color: var(--global-theme-color) !important;
+  text-decoration: none !important;
+  font-size: 0.9rem;
+  transition: all 0.15s ease;
+
+  &:hover {
+    background: var(--global-theme-color);
+    color: var(--global-hover-text-color) !important;
+  }
+  &.primary {
+    background: var(--global-theme-color);
+    color: var(--global-hover-text-color) !important;
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+}
+
+.lab-section-title {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  border-bottom: 1px solid var(--global-divider-color);
+  padding-bottom: 0.4rem;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.lab-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1rem;
+}
+
+.lab-card {
+  background: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.6rem;
+  padding: 1.1rem 1.2rem;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  }
+  .lab-card-emoji {
+    font-size: 1.7rem;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  .lab-card-title {
+    font-weight: 600;
+    font-size: 1.02rem;
+    margin-bottom: 0.3rem;
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+  .lab-card-text {
+    font-size: 0.9rem;
+    color: var(--global-text-color-light);
+    line-height: 1.55;
+    margin: 0;
+  }
+}
+
+.lab-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+
+  .lab-stat {
+    text-align: center;
+    padding: 1.2rem 0.8rem;
+    border-radius: 0.6rem;
+    background: var(--global-card-bg-color);
+    border: 1px solid var(--global-divider-color);
+  }
+  .lab-stat-value {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: var(--global-theme-color);
+    line-height: 1.1;
+  }
+  .lab-stat-label {
+    margin-top: 0.4rem;
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+    line-height: 1.4;
+  }
+}
+
+.lab-highlight {
+  border-left: 4px solid var(--global-theme-color);
+  padding: 0.6rem 1rem;
+  margin: 1rem 0;
+  background: var(--global-card-bg-color);
+  border-radius: 0 0.5rem 0.5rem 0;
+
+  .lab-highlight-title {
+    font-weight: 600;
+  }
+  .lab-highlight-meta {
+    font-size: 0.88rem;
+    color: var(--global-text-color-light);
+  }
+}
+
+// ---------------------------------------------------------------------------
+// People page
+// ---------------------------------------------------------------------------
+.members-group {
+  margin-bottom: 2.5rem;
+
+  .members-note {
+    font-size: 0.88rem;
+    color: var(--global-text-color-light);
+    margin-top: -0.4rem;
+    margin-bottom: 0.8rem;
+  }
+}
+
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 1.1rem;
+}
+
+.member-card {
+  background: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.7rem;
+  padding: 1.1rem 1rem 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &.member-card-wide {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    text-align: left;
+    gap: 1.4rem;
+    padding: 1.4rem;
+    .member-photo {
+      width: 140px;
+      height: 140px;
+      flex-shrink: 0;
+    }
+    .member-body {
+      align-items: flex-start;
+    }
+  }
+
+  .member-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--global-divider-color);
+    background: var(--global-divider-color);
+    margin-bottom: 0.7rem;
+  }
+  .member-photo-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--global-hover-text-color);
+    background: var(--global-theme-color);
+    opacity: 0.85;
+  }
+  .member-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .member-name {
+    font-weight: 600;
+    font-size: 1.02rem;
+    line-height: 1.3;
+  }
+  .member-name-ko {
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+  }
+  .member-role {
+    font-size: 0.85rem;
+    color: var(--global-theme-color);
+    margin-top: 0.15rem;
+  }
+  .member-meta {
+    font-size: 0.8rem;
+    color: var(--global-text-color-light);
+    margin-top: 0.35rem;
+    line-height: 1.45;
+    word-break: break-all;
+  }
+  .member-interests {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    justify-content: inherit;
+    span {
+      font-size: 0.7rem;
+      padding: 0.12rem 0.5rem;
+      border-radius: 999px;
+      border: 1px solid var(--global-divider-color);
+      color: var(--global-text-color-light);
+    }
+  }
+  .member-links {
+    margin-top: 0.55rem;
+    display: flex;
+    gap: 0.6rem;
+    a {
+      font-size: 1rem;
+      color: var(--global-text-color-light);
+      &:hover {
+        color: var(--global-theme-color);
+      }
+    }
+  }
+}
+
+.alumni-table {
+  width: 100%;
+  font-size: 0.92rem;
+  th {
+    text-align: left;
+    border-bottom: 1px solid var(--global-divider-color);
+    padding: 0.4rem 0.5rem;
+    color: var(--global-text-color-light);
+    font-weight: 600;
+  }
+  td {
+    padding: 0.45rem 0.5rem;
+    border-bottom: 1px solid var(--global-divider-color);
+    vertical-align: top;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Research page
+// ---------------------------------------------------------------------------
+.research-area {
+  margin-bottom: 2.6rem;
+  scroll-margin-top: 5rem;
+
+  .research-title {
+    font-size: 1.45rem;
+    margin-bottom: 0.1rem;
+  }
+  .research-tagline {
+    color: var(--global-theme-color);
+    font-style: italic;
+    margin-bottom: 0.7rem;
+  }
+  .research-highlights {
+    list-style: none;
+    padding-left: 0;
+    margin: 0.6rem 0 0;
+    li {
+      padding: 0.35rem 0;
+      border-top: 1px dashed var(--global-divider-color);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.8rem;
+      align-items: baseline;
+    }
+    .research-highlight-title {
+      font-weight: 500;
+    }
+  }
+  .research-img {
+    width: 100%;
+    border-radius: 0.6rem;
+    margin-bottom: 0.8rem;
+  }
+}
+
+.link-pill {
+  display: inline-block;
+  font-size: 0.72rem;
+  padding: 0.1rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid var(--global-theme-color);
+  color: var(--global-theme-color) !important;
+  text-decoration: none !important;
+  line-height: 1.5;
+  white-space: nowrap;
+  &:hover {
+    background: var(--global-theme-color);
+    color: var(--global-hover-text-color) !important;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Projects (grants), talks, patents, teaching
+// ---------------------------------------------------------------------------
+.grant-list,
+.talk-list,
+.patent-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+
+  li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--global-divider-color);
+    line-height: 1.5;
+  }
+  .item-title {
+    font-weight: 500;
+  }
+  .item-meta {
+    font-size: 0.86rem;
+    color: var(--global-text-color-light);
+  }
+}
+
+.status-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 0.1rem 0.5rem;
+  border-radius: 0.3rem;
+  margin-right: 0.4rem;
+  vertical-align: middle;
+  color: #fff;
+  background: var(--global-theme-color);
+
+  &.completed,
+  &.pending {
+    background: var(--global-text-color-light);
+  }
+  &.registered {
+    background: #0f8b6a;
+  }
+  &.kr {
+    background: #1f5fa8;
+  }
+  &.us {
+    background: #b8231e;
+  }
+}
+
+.course-term {
+  margin-bottom: 1.6rem;
+  h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.4rem;
+  }
+  table {
+    width: 100%;
+    font-size: 0.93rem;
+    td {
+      padding: 0.35rem 0.5rem;
+      border-bottom: 1px solid var(--global-divider-color);
+    }
+    td:first-child {
+      font-family: monospace;
+      font-size: 0.85rem;
+      color: var(--global-text-color-light);
+      white-space: nowrap;
+      width: 34%;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Contact / join
+// ---------------------------------------------------------------------------
+.contact-block {
+  background: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.7rem;
+  padding: 1.2rem 1.4rem;
+  margin-bottom: 1.2rem;
+  h3 {
+    margin-top: 0;
+    font-size: 1.1rem;
+  }
+  p {
+    margin-bottom: 0.3rem;
+  }
+}
+
+.map-embed {
+  width: 100%;
+  height: 340px;
+  border: 0;
+  border-radius: 0.7rem;
+}
+
+// Professor page
+.prof-timeline {
+  list-style: none;
+  padding-left: 0;
+  li {
+    position: relative;
+    padding: 0.4rem 0 0.4rem 1.3rem;
+    border-left: 2px solid var(--global-divider-color);
+    &::before {
+      content: "";
+      position: absolute;
+      left: -6px;
+      top: 0.95rem;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--global-theme-color);
+    }
+  }
+  .tl-title {
+    font-weight: 600;
+  }
+  .tl-meta {
+    font-size: 0.86rem;
+    color: var(--global-text-color-light);
+  }
+}

@@ -1,0 +1,8 @@
+# "Latest research highlight" box on the home page. Edit freely.
+title: Two papers accepted to BMVC 2026 🎉
+items:
+  - title: "Watch Your Speech: Text-aware Video-to-Speech Synthesis with Textual Conditioning"
+    authors: Gunwoo Lee*, Yoori Oh*, Yoseob Han
+  - title: "EyeTAG: Eye Trajectory-Aware Gaze Estimation"
+    authors: Jungmin Lee, Niamat Ullah⁺, Yoseob Han⁺
+note: "* equal contribution · ⁺ corresponding authors"

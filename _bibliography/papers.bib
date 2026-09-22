@@ -1,0 +1,497 @@
+---
+---
+
+% =============================================================================
+% 4ILab publications
+% -----------------------------------------------------------------------------
+% HOW TO ADD A PAPER (see docs/HOWTO.md for the full guide):
+%   1. Copy one of the entries below (journal: article; conference: inproceedings).
+%   2. Give it a unique key:  <firstauthor-lastname><year><keyword>   e.g. lee2026eyetag
+%   3. Fill in the fields. Optional al-folio fields:
+%        abbr      = {MI}   research-area badge (MI, IP, ML, AP, LP, DD, see _data/venues.yml)
+%        pdf       = {https://...}   link to the paper (PDF / publisher page)
+%        html      = {https://...}   link to the publisher page (shown as "HTML")
+%        code      = {https://github.com/...}
+%        arxiv     = {2401.01234}
+%        selected  = {true}   show on the home page "selected publications" list
+%        award     = {Oral}   shown as a small badge   (award_name gives the tooltip text)
+%        preview   = {file.png}  thumbnail in assets/img/publication_preview/
+%        bibtex_show = {true}  show a "BIB" button
+%   4. Mark shared first authors with * and corresponding authors with + in the
+%      author field, and explain them in `annotation`.
+% =============================================================================
+
+% ------------------------------- 2026 ----------------------------------------
+
+@inproceedings{lee2026watchyourspeech,
+  abbr        = {AP},
+  bibtex_show = {true},
+  title       = {Watch Your Speech: Text-aware Video-to-Speech Synthesis with Textual Conditioning},
+  author      = {Lee*, Gunwoo and Oh*, Yoori and Han, Yoseob},
+  booktitle   = {British Machine Vision Conference (BMVC)},
+  address     = {Lancaster, UK},
+  year        = {2026},
+  month       = {November},
+  annotation  = {* Equal contribution},
+  selected    = {true}
+}
+
+@inproceedings{lee2026eyetag,
+  abbr        = {IP},
+  bibtex_show = {true},
+  title       = {EyeTAG: Eye Trajectory-Aware Gaze Estimation},
+  author      = {Lee, Jungmin and Ullah+, Niamat and Han+, Yoseob},
+  booktitle   = {British Machine Vision Conference (BMVC)},
+  address     = {Lancaster, UK},
+  year        = {2026},
+  month       = {November},
+  annotation  = {+ Corresponding authors},
+  selected    = {true}
+}
+
+@inproceedings{kim2026vessel,
+  abbr        = {MI},
+  bibtex_show = {true},
+  title       = {Context-Aware 3D Vessel Segmentation with Anatomical Guidance},
+  author      = {Kim, Seo A and Han+, Yoseob and Ryu+, Kanghyun},
+  booktitle   = {IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  address     = {Barcelona, Spain},
+  year        = {2026},
+  month       = {May},
+  award       = {Oral},
+  award_name  = {Oral presentation},
+  code        = {https://github.com/4ILab-SSU/vessel-segmentation},
+  annotation  = {+ Corresponding authors},
+  selected    = {true}
+}
+
+% ------------------------------- 2025 ----------------------------------------
+
+@article{kim2025comedsam,
+  abbr        = {MI},
+  bibtex_show = {true},
+  title       = {CoMed-SAM: Collaborative Medical SAM for Multi-Modality Image Segmentation},
+  author      = {Kim, Minkyu and Ryu+, Kanghyun and Han+, Yoseob},
+  journal     = {IEEE Access},
+  year        = {2025},
+  month       = {October},
+  html        = {https://ieeexplore.ieee.org/document/11218923},
+  code        = {https://github.com/hunzo300/CoMed-SAM},
+  annotation  = {+ Corresponding authors},
+  selected    = {true}
+}
+
+@article{lee2025stsrperf,
+  abbr        = {MI},
+  bibtex_show = {true},
+  title       = {ST-SRPerf: Continuous spatiotemporal representation for perfusion MRI super-resolution through neural ODE and implicit neural representation},
+  author      = {Lee, Junhyeok and Han, Yoseob and Jang, Joon and Lee, Hyochul and Park, Jung Hyun and Hwang, Inpyeong and Chung, Jin Wook and Choi, Seung Hong and Choi, Kyu Sung},
+  journal     = {Computers in Biology and Medicine},
+  year        = {2025},
+  month       = {October},
+  html        = {https://www.sciencedirect.com/science/article/abs/pii/S0010482525013885}
+}
+
+@inproceedings{oh2025audiotext,
+  abbr        = {ML},
+  bibtex_show = {true},
+  title       = {Understanding Audio-Text Retrieval Through Singular Value Decomposition},
+  author      = {Oh, Yoori and Han, Yoseob and Bae, Joonhyeon and Sim, Jaeheon and Lee, Kyogu},
+  booktitle   = {International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR)},
+  address     = {Padua, Italy},
+  year        = {2025},
+  month       = {July},
+  pdf         = {https://dl.acm.org/doi/pdf/10.1145/3726302.3730261},
+  selected    = {true}
+}
+
+@article{han2025lowdose,
+  abbr        = {MI},
+  bibtex_show = {true},
+  title       = {Low-dose CT Reconstruction using Cross-domain Deep Learning with Domain Transfer Module},
+  author      = {Han, Yoseob},
+  journal     = {Physics in Medicine \& Biology},
+  year        = {2025},
+  month       = {February},
+  doi         = {10.1088/1361-6560/adb932},
+  pdf         = {https://iopscience.iop.org/article/10.1088/1361-6560/adb932/pdf}
+}
+
+@article{lee2025metalearning,
+  abbr        = {MI},
+  bibtex_show = {true},
+  title       = {Meta-Learning Guidance for Robust Medical Image Synthesis: Addressing the Real-World Misalignment and Corruptions},
+  author      = {Lee, Jaehun and Kim, Daniel and Kim, Taehun and Al-Masni, Mohammed A and Han, Yoseob and Kim, Dong-Hyun and Ryu, Kanghyun},
+  journal     = {Computerized Medical Imaging and Graphics},
+  year        = {2025},
+  month       = {February},
+  html        = {https://www.sciencedirect.com/science/article/pii/S0895611125000151}
+}
+
+@article{lee2025deepfake,
+  abbr        = {DD},
+  bibtex_show = {true},
+  title       = {Dual-Channel Deepfake Audio Detection: Leveraging Direct and Reverberant Waveforms},
+  author      = {Lee*, Gunwoo and Lee*, Jungmin and Jung, Minkyo and Lee, Joseph and Hong, Kihun and Jung, Souhwan and Han, Yoseob},
+  journal     = {IEEE Access},
+  year        = {2025},
+  month       = {January},
+  html        = {https://ieeexplore.ieee.org/document/10849546},
+  code        = {https://github.com/gunwoo5034/Dual-Channel-Audio-Deepfake-Detection},
+  annotation  = {* Equal contribution},
+  selected    = {true}
+}
+
+% ------------------------------- 2024 ----------------------------------------
+
+@inproceedings{oh2024paraphraser,
+  abbr        = {LP},
+  bibtex_show = {true},
+  title       = {Distance Sampling-based Paraphraser Leveraging ChatGPT for Text Data Manipulation},
+  author      = {Oh*, Yoori and Han*, Yoseob and Lee, Kyogu},
+  booktitle   = {International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR)},
+  address     = {Washington D.C., USA},
+  year        = {2024},
+  month       = {July},
+  pdf         = {https://dl.acm.org/doi/pdf/10.1145/3626772.3657976},
+  annotation  = {* Equal contribution}
+}
+
+@article{han2024hierarchical,
+  abbr        = {MI},
+  bibtex_show = {true},
+  title       = {Hierarchical decomposed dual-domain deep learning for sparse-view CT reconstruction},
+  author      = {Han, Yoseob},
+  journal     = {Physics in Medicine \& Biology},
+  year        = {2024},
+  month       = {April},
+  doi         = {10.1088/1361-6560/ad31c7},
+  html        = {https://iopscience.iop.org/article/10.1088/1361-6560/ad31c7}
+}
+
+% ------------------------------- 2023 ----------------------------------------
+
+@inproceedings{oh2023emotional,
+  abbr        = {AP},
+  bibtex_show = {true},
+  title       = {Semi-supervised Learning for Continuous Emotional Intensity Controllable Speech Synthesis with Disentangled Representations},
+  author      = {Oh, Yoori and Lee, Juheon and Han, Yoseob and Lee, Kyogu},
+  booktitle   = {INTERSPEECH},
+  address     = {Dublin, Ireland},
+  year        = {2023},
+  month       = {August},
+  pdf         = {https://www.isca-archive.org/interspeech_2023/oh23_interspeech.pdf},
+  website     = {https://sage-ozraraptor-a82.notion.site/DEMO-CONTINUOUS-EMOTIONAL-INTENSITY-CONTROLLABLE-SPEECH-SYNTHESIS-USING-SEMI-SUPERVISED-LEARNING-8e9ef0bd22594b26b56467c5b841dfe9}
+}
+
+@article{ryu2023dental,
+  abbr        = {MI},
+  bibtex_show = {true},
+  title       = {Multi-planar 2.5D U-Net for image quality enhancement of dental cone-beam CT},
+  author      = {Ryu, Kanghyun and Lee, Chena and Han, Yoseob and Pang, Subeen and Kim, Young Hyun and Choi, Chanyeol and Jang, Ikbeom and Han, Sang-Sun},
+  journal     = {PLOS ONE},
+  year        = {2023},
+  month       = {May},
+  doi         = {10.1371/journal.pone.0285608},
+  html        = {https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0285608}
+}
+
+% ------------------------------- 2022 ----------------------------------------
+
+@inproceedings{han2022nullspace,
+  abbr        = {MI},
+  title       = {Null space image estimator using dual-domain deep learning for Region-of-Interest CT reconstruction},
+  author      = {Han, Yoseob and Kim, Kyungsang and Li, Quanzheng},
+  booktitle   = {International Conference on Image Formation in X-Ray Computed Tomography (Fully3D)},
+  address     = {Leuven, Belgium},
+  year        = {2022},
+  month       = {July},
+  pdf         = {https://www.dropbox.com/s/d4d5vakt066wh4c/fully3d_interior_tomography.pdf?dl=0}
+}
+
+@article{han2022interior,
+  abbr        = {MI},
+  bibtex_show = {true},
+  title       = {End-to-End Deep Learning for Interior Tomography with Low-Dose X-ray CT},
+  author      = {Han, Yoseob and Wu, Dufan and Kim, Kyungsang and Li, Quanzheng},
+  journal     = {Physics in Medicine \& Biology},
+  year        = {2022},
+  month       = {May},
+  doi         = {10.1088/1361-6560/ac6560},
+  html        = {https://iopscience.iop.org/article/10.1088/1361-6560/ac6560}
+}
+
+% ------------------------------- 2021 ----------------------------------------
+
+@article{han2021stemedx,
+  abbr        = {MI},
+  bibtex_show = {true},
+  title       = {Deep Learning STEM-EDX Tomography for Nanocrystals},
+  author      = {Han*, Yoseob and Jang*, Jaeduck and Cha*, Eunju and Lee*, Junho and Jeong, Myoungho and Kim, Tae-Gon and Chae, Byeong Gyu and Kim, Hee Goo and Jun, Shinae and Lee, Eunha and Ye, Jong Chul},
+  journal     = {Nature Machine Intelligence},
+  year        = {2021},
+  month       = {February},
+  doi         = {10.1038/s42256-020-00289-5},
+  html        = {https://www.nature.com/articles/s42256-020-00289-5},
+  annotation  = {* Equal contribution},
+  selected    = {true}
+}
+
+% ------------------------------- 2020 ----------------------------------------
+
+@article{choi2020dce,
+  abbr        = {MI},
+  title       = {Improving the reliability of pharmacokinetic parameters in dynamic contrast-enhanced MRI in gliomas: Deep learning approach},
+  author      = {Choi, Kyu Sung and You, Sung-Hye and Han, Yoseob and Ye, Jong Chul and Choi, Seung Hong and Jeong, Bumseok},
+  journal     = {Neuroradiology},
+  year        = {2020},
+  month       = {August},
+  doi         = {10.1148/radiol.2020192763},
+  html        = {https://pubs.rsna.org/doi/full/10.1148/radiol.2020192763}
+}
+
+@article{han2020dbp,
+  abbr        = {MI},
+  bibtex_show = {true},
+  title       = {Differentiated Backprojection Domain Deep Learning for Conebeam Artifact Removal},
+  author      = {Han*, Yoseob and Kim*, Junyoung and Ye, Jong Chul},
+  journal     = {IEEE Transactions on Medical Imaging},
+  year        = {2020},
+  month       = {June},
+  html        = {https://ieeexplore.ieee.org/document/9109572},
+  annotation  = {* Equal contribution}
+}
+
+@inproceedings{kim2020coneangle,
+  abbr        = {MI},
+  title       = {Cone-Angle Artifact Removal Using Differentiated Backprojection Domain Deep Learning},
+  author      = {Kim*, Junyoung and Han*, Yoseob and Ye, Jong Chul},
+  booktitle   = {IEEE International Symposium on Biomedical Imaging (ISBI)},
+  address     = {Iowa City, IA, USA},
+  year        = {2020},
+  month       = {April},
+  html        = {https://ieeexplore.ieee.org/document/9098532},
+  annotation  = {* Equal contribution}
+}
+
+@inproceedings{han2020filtration,
+  abbr        = {MI},
+  title       = {Adaptive X-ray CT Filtration method using deep CNN},
+  author      = {Han, Yoseob and Kim, Junyoung and Ye, Jong Chul and Klasky, Marc Louis and Wohlberg, Brendt},
+  booktitle   = {ISBI Workshop on Deep Learning for Biomedical Image Reconstruction},
+  address     = {Iowa City, IA, USA},
+  year        = {2020},
+  month       = {April},
+  pdf         = {https://www.dropbox.com/s/rhv07hjhuetp9ji/optimal_filtration.pdf?dl=0}
+}
+
+@article{do2020multicontrast,
+  abbr        = {MI},
+  title       = {Reconstruction of Multi-contrast MR Images through Deep Learning},
+  author      = {Do, Won-Joon and Seo, Sunghun and Han, Yoseob and Ye, Jong Chul and Choi, Seung Hong and Park, Sung-Hong},
+  journal     = {Medical Physics},
+  year        = {2020},
+  month       = {January},
+  doi         = {10.1002/mp.14006},
+  html        = {https://aapm.onlinelibrary.wiley.com/doi/10.1002/mp.14006}
+}
+
+% ------------------------------- 2019 ----------------------------------------
+
+@article{han2019onenetwork,
+  abbr        = {MI},
+  title       = {One Network to Solve All ROIs: Deep Learning CT for Any ROI using Differentiated Backprojection},
+  author      = {Han, Yoseob and Ye, Jong Chul},
+  journal     = {Medical Physics},
+  year        = {2019},
+  month       = {December},
+  doi         = {10.1002/mp.13631},
+  html        = {https://aapm.onlinelibrary.wiley.com/doi/10.1002/mp.13631}
+}
+
+@article{lee2019epi,
+  abbr        = {MI},
+  title       = {k-Space Deep Learning for Reference-free EPI Ghost Correction},
+  author      = {Lee, Juyoung and Han, Yoseob and Ye, Jong Chul},
+  journal     = {Magnetic Resonance in Medicine},
+  year        = {2019},
+  month       = {July},
+  doi         = {10.1002/mrm.27896},
+  html        = {https://onlinelibrary.wiley.com/doi/abs/10.1002/mrm.27896}
+}
+
+@article{han2019kspace,
+  abbr        = {MI},
+  bibtex_show = {true},
+  title       = {k-Space Deep Learning for Accelerated MRI},
+  author      = {Han, Yoseob and Sunwoo, Leonard and Ye, Jong Chul},
+  journal     = {IEEE Transactions on Medical Imaging},
+  year        = {2019},
+  month       = {July},
+  html        = {https://ieeexplore.ieee.org/document/8756028},
+  selected    = {true}
+}
+
+@inproceedings{han2019noncartesian,
+  abbr        = {MI},
+  title       = {Non-Cartesian k-space deep learning for accelerated MRI},
+  author      = {Han, Yoseob and Ye, Jong Chul},
+  booktitle   = {ISMRM Annual Meeting},
+  address     = {Montreal, QC, Canada},
+  year        = {2019},
+  month       = {May},
+  html        = {https://cds.ismrm.org/protected/19MProceedings/PDFfiles/4661.html}
+}
+
+% ------------------------------- 2018 ----------------------------------------
+
+@inproceedings{han2018noncartesianws,
+  abbr        = {MI},
+  title       = {Non-Cartesian k-space deep learning for accelerated MRI},
+  author      = {Han, Yoseob and Ye, Jong Chul},
+  booktitle   = {ISMRM Workshop on Machine Learning Part 2},
+  address     = {Washington, D.C., USA},
+  year        = {2018},
+  month       = {October},
+  pdf         = {https://www.dropbox.com/s/4x3lz1lfe7ystr8/2018_ismrm_machine_learning_ys_v5.pdf?dl=0}
+}
+
+@inproceedings{do2018multicontrast,
+  abbr        = {MI},
+  title       = {Reconstruction of MR images by combining k-space of multi-contrast MR data through deep learning},
+  author      = {Do, Won-Joon and Han, Yoseob and Choi, Seung Hong and Ye, Jong Chul and Park, Sung-Hong},
+  booktitle   = {ISMRM Annual Meeting},
+  address     = {Paris, France},
+  year        = {2018},
+  month       = {June},
+  html        = {https://cds.ismrm.org/protected/18MProceedings/PDFfiles/2738.html}
+}
+
+@inproceedings{han2018baggage,
+  abbr        = {MI},
+  title       = {Deep Learning Reconstruction for 9-View Dual Energy CT Baggage Scanner},
+  author      = {Han, Yoseob and Ye, Jong Chul},
+  booktitle   = {International Conference on Image Formation in X-Ray Computed Tomography (CT Meeting)},
+  address     = {Salt Lake City, UT, USA},
+  year        = {2018},
+  month       = {May},
+  arxiv       = {1801.01258}
+}
+
+@inproceedings{han2018interior,
+  abbr        = {MI},
+  title       = {Deep Learning Interior Tomography for Region-of-Interest Reconstruction},
+  author      = {Han, Yoseob and Gu, Jawook and Ye, Jong Chul},
+  booktitle   = {International Conference on Image Formation in X-Ray Computed Tomography (CT Meeting)},
+  address     = {Salt Lake City, UT, USA},
+  year        = {2018},
+  month       = {May},
+  pdf         = {https://www.dropbox.com/s/98amhs12pvdq7es/Deep%20Residual%20Learning%20Approach%20for%20Sparse-view%20CT%20Reconstruction.pdf?dl=0}
+}
+
+@article{han2018framing,
+  abbr        = {MI},
+  bibtex_show = {true},
+  title       = {Framing U-Net via Deep Convolutional Framelets: Application to Sparse-View CT},
+  author      = {Han, Yoseob and Ye, Jong Chul},
+  journal     = {IEEE Transactions on Medical Imaging},
+  year        = {2018},
+  month       = {April},
+  html        = {https://ieeexplore.ieee.org/abstract/document/8332969},
+  selected    = {true}
+}
+
+@article{ye2018framelets,
+  abbr        = {IP},
+  bibtex_show = {true},
+  title       = {Deep Convolutional Framelets: A General Deep Learning Framework for Inverse Problems},
+  author      = {Ye, Jong Chul and Han, Yoseob and Cha, Eunju},
+  journal     = {SIAM Journal on Imaging Sciences},
+  year        = {2018},
+  month       = {April},
+  doi         = {10.1137/17M1141771},
+  html        = {https://epubs.siam.org/doi/10.1137/17M1141771}
+}
+
+@article{han2018domainadaptation,
+  abbr        = {MI},
+  title       = {Deep learning with domain adaptation for accelerated projection-reconstruction MR},
+  author      = {Han, Yoseob and Yoo, Jaejun and Kim, Hak Hee and Shin, Hee Jung and Sung, Kyunghyun and Ye, Jong Chul},
+  journal     = {Magnetic Resonance in Medicine},
+  year        = {2018},
+  month       = {February},
+  doi         = {10.1002/mrm.27106},
+  html        = {https://onlinelibrary.wiley.com/doi/10.1002/mrm.27106}
+}
+
+% ------------------------------- 2017 ----------------------------------------
+
+@inproceedings{han2017residual,
+  abbr        = {MI},
+  title       = {Deep Residual Learning Approach for Sparse-view CT Reconstruction},
+  author      = {Han, Yoseob and Ye, Jong Chul},
+  booktitle   = {International Conference on Image Formation in X-Ray Computed Tomography (Fully3D)},
+  address     = {Xi'an, China},
+  year        = {2017},
+  month       = {June},
+  pdf         = {https://www.dropbox.com/s/y54wjbqcytgqjuq/Fully3D%2717_Proceedings_Updated.pdf?dl=0}
+}
+
+@inproceedings{han2017projection,
+  abbr        = {MI},
+  title       = {Accelerated projection reconstruction MR imaging using deep residual learning},
+  author      = {Han, Yoseob and Lee, Dongwook and Yoo, Jaejun and Ye, Jong Chul},
+  booktitle   = {ISMRM Annual Meeting},
+  address     = {Honolulu, HI, USA},
+  year        = {2017},
+  month       = {April},
+  html        = {https://cds.ismrm.org/protected/17MProceedings/PDFfiles/0690.html}
+}
+
+% ------------------------------- 2016 ----------------------------------------
+
+@inproceedings{jin2016ultrasound,
+  abbr        = {MI},
+  title       = {Compressive dynamic aperture B-mode ultrasound imaging using annihilating filter-based low-rank interpolation},
+  author      = {Jin, Kyong Hwan and Han, Yoseob and Ye, Jong Chul},
+  booktitle   = {IEEE International Symposium on Biomedical Imaging (ISBI)},
+  address     = {Prague, Czech Republic},
+  year        = {2016},
+  month       = {April},
+  html        = {https://ieeexplore.ieee.org/abstract/document/7493436}
+}
+
+@inproceedings{han2016spectral,
+  abbr        = {MI},
+  title       = {Sparse-view X-ray spectral CT reconstruction using annihilating filter-based low rank Hankel matrix approach},
+  author      = {Han, Yoseob and Jin, Kyong Hwan and Kim, Kyungsang and Ye, Jong Chul},
+  booktitle   = {IEEE International Symposium on Biomedical Imaging (ISBI)},
+  address     = {Prague, Czech Republic},
+  year        = {2016},
+  month       = {April},
+  html        = {https://ieeexplore.ieee.org/document/7493333}
+}
+
+@inproceedings{han2016multiscale,
+  abbr        = {MI},
+  title       = {Multi-scale Circular Conebeam Interior Tomography using Bedrosian Identity: Verification with Real Data},
+  author      = {Han, Yoseob and Lee, Minji and Ward, John Paul and Unser, Michael and Cho, Seungryong and Ye, Jong Chul},
+  booktitle   = {International Conference on Image Formation in X-Ray Computed Tomography (CT Meeting)},
+  address     = {Bamberg, Germany},
+  year        = {2016},
+  month       = {July},
+  pdf         = {https://www.dropbox.com/s/ilkc3chb38ncf8k/multi-scale_circular_conebeam_interior_tomography_using_bedrosian_identity_verification_with_real_data_final.pdf?dl=0}
+}
+
+% ------------------------------- 2015 ----------------------------------------
+
+@article{lee2015interior,
+  abbr        = {MI},
+  title       = {Interior Tomography Using 1D Generalized Total Variation. Part II: Multiscale Implementation},
+  author      = {Lee, Minji and Han, Yoseob and Ward, John Paul and Unser, Michael and Ye, Jong Chul},
+  journal     = {SIAM Journal on Imaging Sciences},
+  year        = {2015},
+  month       = {October},
+  doi         = {10.1137/15M1015881},
+  html        = {https://epubs.siam.org/doi/abs/10.1137/15M1015881}
+}

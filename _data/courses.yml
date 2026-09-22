@@ -1,0 +1,48 @@
+# Teaching  ->  rendered on /teaching/
+# One block per semester, newest first.
+#   term    : e.g. "2025 Fall"
+#   emoji   : optional
+#   courses : list of { code, title, url (optional) }
+
+- term: 2025 Fall
+  emoji: 🍁
+  courses:
+    - { code: "2150085101", title: Machine Learning }
+    - { code: "5010192505", title: Programming and Practice }
+    - { code: "5027648001", title: Big Data Processing }
+    - { code: "5052308201", title: Parallel Computing }
+
+- term: 2025 Spring
+  emoji: 🌱
+  courses:
+    - { code: "2150085901", title: Artificial Neural Networks }
+    - { code: "2150443801", title: Digital Engineering }
+    - { code: "5053156701", title: Generative AI }
+    - { code: "5037453601", title: Deep Learning Basics }
+
+- term: 2024 Fall
+  emoji: 🍁
+  courses:
+    - { code: "2150034001 / 2150085101", title: Machine Learning }
+    - { code: "5052308201", title: Parallel Computing }
+
+- term: 2024 Spring
+  emoji: 🌱
+  courses:
+    - { code: "2150443801 / 2150443802 / 2150443803", title: Digital Engineering }
+
+- term: 2023 Fall
+  emoji: 🍁
+  courses:
+    - { code: "5010192505 / 5010192506", title: Programming and Practice }
+    - { code: "5037453601", title: Deep Learning Basics }
+
+- term: 2023 Summer
+  emoji: ⛱️
+  courses:
+    - { code: "2150034001", title: Machine Learning (Engaged Learning) }
+
+- term: 2023 Spring
+  emoji: 🌱
+  courses:
+    - { code: "2150443801 / 2150443802", title: Digital Engineering }

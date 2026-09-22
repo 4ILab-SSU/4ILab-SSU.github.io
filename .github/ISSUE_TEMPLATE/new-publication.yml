@@ -1,0 +1,54 @@
+name: "📄 논문 추가 요청 (New publication)"
+description: 직접 PR을 보내기 어려울 때, 논문 정보를 남기면 관리자가 대신 추가합니다.
+title: "[pub] "
+labels: [publication]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: 논문 제목 (Title)
+    validations:
+      required: true
+  - type: input
+    id: authors
+    attributes:
+      label: 저자 (Authors)
+      description: "예: Gunwoo Lee*, Yoori Oh*, and Yoseob Han (공동1저자 *, 교신저자 +)"
+    validations:
+      required: true
+  - type: input
+    id: venue
+    attributes:
+      label: 학회/저널 (Venue)
+      description: "예: BMVC 2026 / IEEE Transactions on Medical Imaging"
+    validations:
+      required: true
+  - type: input
+    id: date
+    attributes:
+      label: 연도·월 (Year, month)
+      placeholder: "2026, November"
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: 연구 분야 배지 (abbr)
+      options: [MI, IP, ML, AP, LP, DD]
+    validations:
+      required: true
+  - type: input
+    id: links
+    attributes:
+      label: 링크 (PDF / DOI / arXiv / code)
+  - type: checkboxes
+    id: flags
+    attributes:
+      label: 옵션
+      options:
+        - label: 홈 화면 Selected publications에 표시
+        - label: Oral / Best paper 등 수상 있음 (아래에 적어주세요)
+  - type: textarea
+    id: notes
+    attributes:
+      label: 비고

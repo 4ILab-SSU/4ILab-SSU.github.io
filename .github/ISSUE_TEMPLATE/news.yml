@@ -1,0 +1,17 @@
+name: "📰 뉴스 등록 (Post news)"
+description: 논문 채택, 수상, 신입 멤버 환영 등 소식
+title: "[news] "
+labels: [news]
+body:
+  - type: input
+    id: date
+    attributes:
+      label: 날짜 (YYYY-MM-DD)
+    validations:
+      required: true
+  - type: textarea
+    id: body
+    attributes:
+      label: 내용 (한 문단, Markdown 가능)
+    validations:
+      required: true

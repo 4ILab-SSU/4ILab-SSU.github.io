@@ -1,0 +1,128 @@
+# Patents  ->  rendered on /publications/#patents
+#   inventors : comma-separated
+#   title     : patent title
+#   assignee  : (optional)
+#   country   : KR | US
+#   number    : registration or application number
+#   status    : registered | pending
+#   date      : YYYY-MM-DD (registration or filing date)
+#   url       : (optional) link to the certificate / patent office page
+
+- inventors: 이교구, 오유리, 심재헌, 배준현, 한요섭
+  title: 오디오-텍스트 검색을 위한 큐 기반 대조 학습 방법 및 이를 위한 컴퓨터 장치
+  assignee: 서울대학교 산학협력단, 숭실대학교 산학협력단
+  country: KR
+  number: 10-2025-0194175
+  status: pending
+  date: 2025-12-01
+
+- inventors: 한요섭, 정민교
+  title: 딥러닝 기반 저선량 CT 이미지 재구성 시스템
+  assignee: 숭실대학교 산학협력단
+  country: KR
+  number: 10-2025-0074750
+  status: pending
+  date: 2025-06-01
+
+- inventors: 한요섭, 류강현, 김민규
+  title: 의료 영상 분할 장치 및 그것의 동작 방법
+  assignee: 숭실대학교 산학협력단
+  country: KR
+  number: 10-2025-0096474
+  status: pending
+  date: 2025-07-01
+
+- inventors: 한요섭, 정민교
+  title: 자기지도 학습 기반 희소뷰 CT 영상 재구성 방법 및 장치
+  assignee: 숭실대학교 산학협력단
+  country: KR
+  number: 10-2025-0099401
+  status: pending
+  date: 2025-07-01
+
+- inventors: Jong Chul Ye, Yoseob Han
+  title: Method for processing sparse-view computed tomography image using neural network and apparatus therefor
+  country: US
+  number: US-10991132-B2
+  status: registered
+  date: 2021-04-27
+  url: https://patents.google.com/patent/US10991132B2
+
+- inventors: Jong Chul Ye, Yoseob Han
+  title: Method for processing multi-directional X-ray computed tomography image using artificial neural network
+  country: US
+  number: US-10977842-B2
+  status: registered
+  date: 2021-04-13
+  url: https://patents.google.com/patent/US10977842B2
+
+- inventors: Jong Chul Ye, Yoseob Han
+  title: Method for processing all interior computed tomography image using single artificial neural network and apparatus therefor
+  country: KR
+  number: 10-2225747
+  status: registered
+  date: 2021-03-04
+
+- inventors: Jong Chul Ye, Yoseob Han
+  title: Method for processing magnetic resonance imaging using artificial neural network and apparatus therefor
+  country: KR
+  number: 10-2215702
+  status: registered
+  date: 2021-02-08
+
+- inventors: Jong Chul Ye, Yoseob Han, Eunju Cha
+  title: Method and apparatus for processing image based on neural network
+  country: US
+  number: US-10853977-B2
+  status: registered
+  date: 2020-12-01
+  url: https://patents.google.com/patent/US10853977B2
+
+- inventors: Jong Chul Ye, Yoseob Han
+  title: Method for processing multi-directional X-ray computed tomography image using artificial neural network and apparatus therefor
+  country: KR
+  number: 10-2174600
+  status: registered
+  date: 2020-10-30
+
+- inventors: Jong Chul Ye, Yoseob Han
+  title: Method for processing interior computed tomography image using artificial neural network and apparatus therefor
+  country: KR
+  number: 10-2094599
+  status: registered
+  date: 2020-03-23
+
+- inventors: Jong Chul Ye, Yoseob Han
+  title: Method for processing sparse-view computed tomography image using artificial neural network and apparatus therefor
+  country: KR
+  number: 10-2094598
+  status: registered
+  date: 2020-03-23
+
+- inventors: Jong Chul Ye, Yoseob Han, Eunju Cha
+  title: Method and apparatus for reconstructing image based on neural network
+  country: KR
+  number: 10-2089151
+  status: registered
+  date: 2020-03-09
+
+- inventors: Jong Chul Ye, Yoseob Han
+  title: Computed tomography image reconstruction method and apparatus
+  country: KR
+  number: 10-1886228
+  status: registered
+  date: 2018-08-01
+
+- inventors: Jong Chul Ye, Minji Lee, Yoseob Han, Jea Young Jeong, Jaehak Lee, Young Hoon Sung
+  title: X-ray imaging apparatus and control method for the same
+  country: KR
+  number: 10-1710866
+  status: registered
+  date: 2017-02-22
+
+- inventors: Jong Chul Ye, Kyong Hwan Jin, Yoseob Han
+  title: Interior tomography reconstruction apparatus using the low rank Fourier interpolation and controlling method thereof
+  country: KR
+  number: 10-1685830
+  status: registered
+  date: 2016-12-06

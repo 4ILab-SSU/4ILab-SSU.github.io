@@ -1,0 +1,53 @@
+# =============================================================================
+# Funded projects  ->  rendered on /projects/
+# -----------------------------------------------------------------------------
+#   title    : project title (Korean or English)
+#   agency   : funding agency (e.g. 한국연구재단)
+#   ministry : ministry / sponsor
+#   start    : YYYY.MM.DD
+#   end      : YYYY.MM.DD
+#   role     : PI / Co-PI / Participant (optional)
+#   status   : ongoing | completed   (ongoing ones are listed first)
+# =============================================================================
+
+- title: 숭실대학교 대학기초연구소지원(G-LAMP) 사업단
+  agency: 한국연구재단
+  ministry: 교육부
+  start: 2025.09.01
+  end: 2030.08.31
+  status: ongoing
+
+- title: 의료보험사기 예방과 영상진단 비용 절감을 위한 멀티모달 기반 의료정보 복원 및 탐지 인공지능 기술 개발
+  agency: 한국연구재단
+  ministry: 과학기술정보통신부
+  start: 2025.09.01
+  end: 2028.12.31
+  status: ongoing
+
+- title: 지능형 사이버 위협 대응 기술 개발 및 인력양성
+  agency: 정보통신기획평가원
+  ministry: 과학기술정보통신부
+  start: 2020.07.01
+  end: 2027.12.31
+  status: ongoing
+
+- title: 허위조작 콘텐츠 진위여부 판별 시스템 개발
+  agency: 과학치안진흥센터
+  ministry: 경찰청
+  start: 2025.04.01
+  end: 2027.12.31
+  status: ongoing
+
+- title: 적대적 공격에 강인한 AI기반 위변조 음성 탐지시스템 개발
+  agency: 정보통신기획평가원
+  ministry: 과학기술정보통신부
+  start: 2023.07.01
+  end: 2025.12.31
+  status: ongoing
+
+- title: 기초과학융합연구소
+  agency: 한국연구재단
+  ministry: 교육부
+  start: 2021.06.01
+  end: 2030.05.31
+  status: ongoing

@@ -1,0 +1,180 @@
+# =============================================================================
+# Lab members  ->  rendered on /people/
+# -----------------------------------------------------------------------------
+# HOW TO ADD YOURSELF (see docs/HOWTO.md):
+#   1. Put a square photo (>= 400x400, jpg/png) in assets/img/members/<your-id>.jpg
+#   2. Copy a block below into the right group and fill it in.
+#   3. Open a pull request. That's it.
+#
+# Fields
+#   name        : full name (English)
+#   name_ko     : Korean name (optional)
+#   role        : "Ph.D.", "Ph.D. Student", "M.S. Student", "B.S. Student", ...
+#   photo       : file name inside assets/img/members/ (omit -> default avatar)
+#   email       : (optional)
+#   department  : (optional) e.g. "Electronic Engineering (IT)"
+#   since       : "YYYY.MM"   when the member joined
+#   until       : "YYYY.MM"   only for alumni
+#   leader      : true        marks a research-team leader (shows a star)
+#   interests   : list of keywords (optional)
+#   links       : github / scholar / linkedin / homepage (all optional)
+#
+# Groups are rendered in the order they appear here.
+# =============================================================================
+
+groups:
+  - title: Professor
+    id: professor
+    members:
+      - name: Yoseob Han
+        name_ko: 한요섭
+        role: Assistant Professor
+        photo: yoseob-han.jpg
+        email: yoseob.han@ssu.ac.kr
+        department: IT Convergence Major, Dept. of Electronic Engineering
+        since: "2023.03"
+        interests: [Medical image reconstruction, Inverse problems, Multimodal AI, Deepfake detection]
+        links:
+          scholar: https://scholar.google.com/citations?user=awRbnvQAAAAJ
+          github: https://github.com/hanyoseob
+          linkedin: https://www.linkedin.com/in/yoseob-han-650988127/
+          youtube: https://www.youtube.com/@hanyoseob
+          homepage: /professor/
+
+  - title: Postdoctoral Researchers
+    id: postdocs
+    members:
+      - name: Niamat Ullah
+        role: Ph.D.
+        photo: niamat-ullah.jpg
+        email: niamat016@ssu.ac.kr
+        department: AI & Computer Engineering
+        since: "2026.03"
+        interests: [Gaze estimation, Computer vision]
+        links:
+          scholar: https://scholar.google.com/citations?user=NHoMp0gAAAAJ
+      - name: Soungsill Park
+        role: Ph.D.
+        photo: soungsill-park.jpg
+        email: sspark@ssu.ac.kr
+        department: Image Engineering - CG/VR
+        since: "2025.03"
+        links:
+          github: https://github.com/soungsill
+
+  - title: Graduate Students
+    id: graduate
+    note: "⭐ marks the leader of a research team."
+    members:
+      - name: Abdul Wasay Sardar
+        role: Ph.D. Student
+        photo: abdul-wasay-sardar.jpg
+        email: abdulwasay@soongsil.ac.kr
+        department: AI & Computer Engineering
+        since: "2026.09"
+        links:
+          scholar: https://scholar.google.com/citations?user=nnRFQuoAAAAJ
+      - name: Jungmin Lee
+        role: M.S. Student
+        photo: jungmin-lee.jpg
+        email: jungmin@soongsil.ac.kr
+        department: Electronic Engineering (IT)
+        since: "2025.03"
+        interests: [Deepfake detection, Gaze estimation, Medical image processing]
+        links:
+          github: https://github.com/peter8366
+      - name: Minkyu Kim
+        role: M.S. Student
+        photo: minkyu-kim.jpg
+        email: yiki9098@soongsil.ac.kr
+        department: Electronic Engineering (IT)
+        since: "2025.03"
+        interests: [Medical image segmentation]
+        links:
+          github: https://github.com/hunzo300
+      - name: Gunwoo Lee
+        role: M.S. Student
+        photo: gunwoo-lee.jpg
+        email: gunwoo@soongsil.ac.kr
+        department: Electronic Engineering (IT)
+        since: "2025.03"
+        interests: [Multimodal learning, Speech synthesis, Deepfake audio detection]
+        links:
+          github: https://github.com/gunwoo5034
+      - name: Minkyo Jung
+        role: M.S. Student
+        photo: minkyo-jung.jpg
+        email: pigminkyo@soongsil.ac.kr
+        department: Electronic Engineering (IT)
+        since: "2025.03"
+        interests: [CT reconstruction, Medical image processing]
+        links:
+          github: https://github.com/minkyo1015
+      - name: Seyeon Jeong
+        role: M.S. Student
+        leader: true
+        photo: seyeon-jeong.jpg
+        email: seyeonj@soongsil.ac.kr
+        department: Electronic Engineering (EE)
+        since: "2025.03"
+        interests: [Multimodal learning, Speech enhancement]
+        links:
+          github: https://github.com/sysy527
+      - name: Suho Han
+        role: M.S. Student
+        photo: suho-han.jpg
+        email: suhohan@soongsil.ac.kr
+        department: Electronic Engineering (IT)
+        since: "2025.03"
+        interests: [Diffusion-based segmentation, Interactive segmentation]
+        links:
+          github: https://github.com/suho-han
+      - name: Hyeongjun Kim
+        role: M.S. Student
+        photo: hyeongjun-kim.jpg
+        email: gudwns1404@soongsil.ac.kr
+        department: Electronic Engineering (EE)
+        since: "2025.09"
+        links:
+          github: https://github.com/alsckd99
+      - name: Minchang Kim
+        role: M.S. Student
+        photo: minchang-kim.jpg
+        email: minchang@soongsil.ac.kr
+        department: Computer Software (CS)
+        since: "2026.02"
+
+  - title: Undergraduate Researchers & Interns
+    id: undergraduate
+    members:
+      - name: Soyoon Lee
+        role: B.S. Student
+        photo: soyoon-lee.jpg
+        email: syzzang7564@gmail.com
+        department: Electronic Engineering (IT)
+        since: "2025.11"
+      - name: Sunyoung Park
+        role: B.S. Student
+        photo: sunyoung-park.jpg
+        email: sunyoung@soongsil.ac.kr
+        department: Electronic Engineering (IT)
+        since: "2026.09"
+      - name: Yeojoon Yoon
+        role: B.S. Student
+        photo: yeojoon-yoon.jpg
+        email: joonyoon0225@soongsil.ac.kr
+        department: Electronic Engineering (IT)
+        since: "2026.09"
+
+# Alumni are rendered as a table (no photos needed).
+alumni:
+  - name: Joseph Lee
+    role: Undergraduate Intern
+    since: "2023.12"
+    until: "2024.05"
+    now: M.S. Student at Yonsei University
+  - name: Geona Lee
+    role: Undergraduate Intern
+    since: "2024.08"
+    until: "2025.07"
+    now: B.S. Student at Soongsil University

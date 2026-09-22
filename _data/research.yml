@@ -1,0 +1,99 @@
+# =============================================================================
+# Research areas  ->  rendered on /research/  (and summarised on the home page)
+# -----------------------------------------------------------------------------
+# Each area has:
+#   id        : anchor used in URLs (letters, digits, hyphens only)
+#   title     : heading
+#   emoji     : optional icon
+#   tagline   : one-line pitch (shown under the heading)
+#   summary   : short paragraph (Markdown allowed)
+#   image     : optional image in assets/img/research/
+#   highlights: list of representative works with links (paper / code / demo)
+# =============================================================================
+
+- id: medical-imaging
+  title: Medical Image Processing
+  emoji: 🏥
+  tagline: Supporting doctors with AI-driven medical imaging
+  summary: >
+    We develop deep-learning methods for medical image reconstruction, restoration and
+    analysis — sparse-view / low-dose CT, interior tomography, accelerated MRI via k-space
+    learning, and 3D segmentation — so that safer, faster acquisitions still yield
+    diagnostic-quality images.
+  highlights:
+    - title: Sparse-view CT reconstruction
+      links:
+        - { name: Paper (IEEE TMI), url: "https://ieeexplore.ieee.org/document/8332969" }
+        - { name: Paper (PMB 2024), url: "https://iopscience.iop.org/article/10.1088/1361-6560/ad31c7" }
+    - title: MRI with k-space interpolation
+      links:
+        - { name: Paper (IEEE TMI), url: "https://ieeexplore.ieee.org/document/8756028" }
+    - title: 3D vessel & multi-modality segmentation
+      links:
+        - { name: Paper (ICASSP 2026), url: "/publications/" }
+        - { name: Code (CoMed-SAM), url: "https://github.com/hunzo300/CoMed-SAM" }
+
+- id: multimodal
+  title: Multimodal Generation & Retrieval
+  emoji: 🔀
+  tagline: AI that generates and searches across text, image, and audio
+  summary: >
+    We study models that move freely between modalities — audio-text retrieval,
+    text-conditioned video-to-speech synthesis, and LLM-based data manipulation —
+    to build systems that understand and produce information in whichever form is most useful.
+  highlights:
+    - title: Audio-text retrieval
+      links:
+        - { name: Paper (SIGIR 2025), url: "https://dl.acm.org/doi/pdf/10.1145/3726302.3730261" }
+    - title: Text-aware video-to-speech synthesis
+      links:
+        - { name: Paper (BMVC 2026), url: "/publications/" }
+    - title: LLM-based paraphrasing for data manipulation
+      links:
+        - { name: Paper (SIGIR 2024), url: "https://dl.acm.org/doi/pdf/10.1145/3626772.3657976" }
+
+- id: deepfake-detection
+  title: Deepfake Detection
+  emoji: 🕵️
+  tagline: Telling real from AI-generated audio and video
+  summary: >
+    We build robust detectors for forged speech and video, including approaches
+    that exploit acoustic cues such as direct vs. reverberant waveforms and that stay
+    robust under adversarial attacks.
+  highlights:
+    - title: Dual-channel deepfake audio detection
+      links:
+        - { name: Paper (IEEE Access 2025), url: "https://ieeexplore.ieee.org/document/10849546" }
+        - { name: Code, url: "https://github.com/gunwoo5034/Dual-Channel-Audio-Deepfake-Detection" }
+
+- id: speech-signal-processing
+  title: Speech Signal Processing
+  emoji: 🎙️
+  tagline: Emotion-aware AI agents that understand and express feelings
+  summary: >
+    Controllable and expressive speech synthesis — e.g. continuous emotional-intensity control
+    with disentangled representations — and speech enhancement.
+  highlights:
+    - title: Emotional speech synthesis
+      links:
+        - { name: Paper (INTERSPEECH 2023), url: "https://www.isca-archive.org/interspeech_2023/oh23_interspeech.pdf" }
+        - { name: Demo, url: "https://sage-ozraraptor-a82.notion.site/DEMO-CONTINUOUS-EMOTIONAL-INTENSITY-CONTROLLABLE-SPEECH-SYNTHESIS-USING-SEMI-SUPERVISED-LEARNING-8e9ef0bd22594b26b56467c5b841dfe9" }
+
+- id: natural-image-processing
+  title: Natural & Industrial Image Processing
+  emoji: 📷
+  tagline: From blurry to brilliant — and from lab to factory
+  summary: >
+    Image restoration and super-resolution for natural images, plus imaging problems from
+    industry such as STEM-EDX tomography for nanocrystals and few-view CT baggage scanners.
+  highlights:
+    - title: Single-image super-resolution
+      links:
+        - { name: Paper (CVPRW 2017 NTIRE), url: "https://openaccess.thecvf.com/content_cvpr_2017_workshops/w12/papers/Timofte_NTIRE_2017_Challenge_CVPR_2017_paper.pdf" }
+        - { name: Code, url: "https://github.com/hanyoseob/NTIRE_2017_Challenge_on_SISR" }
+    - title: STEM-EDX tomography
+      links:
+        - { name: Paper (Nature Machine Intelligence), url: "https://www.nature.com/articles/s42256-020-00289-5" }
+    - title: CT baggage scanner
+      links:
+        - { name: Paper (CT Meeting 2018), url: "https://arxiv.org/pdf/1801.01258.pdf" }

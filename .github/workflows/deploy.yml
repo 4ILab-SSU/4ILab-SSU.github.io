@@ -1,0 +1,74 @@
+# Builds the site with Jekyll and publishes it using GitHub Pages artifacts.
+# Runs on every push to main (deploy) and on every pull request (build check only).
+name: Deploy site
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby 💎
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+
+      - name: Setup Node 🧰
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Validate content files ✅
+        run: |
+          npm ci
+          npm run lint
+
+      - name: Install ImageMagick 🖼️
+        run: sudo apt-get update && sudo apt-get install -y imagemagick
+
+      - name: Build 🔧
+        run: |
+          export JEKYLL_ENV=production
+          bundle exec jekyll build
+
+      - name: Purge unused CSS 🧹
+        run: |
+          npx --no-install purgecss -c purgecss.config.js
+
+      - name: Upload Pages artifact
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: build-and-deploy
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
