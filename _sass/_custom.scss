@@ -520,13 +520,19 @@
   button { padding: 10px 14px; border: 1px solid var(--global-divider-color); border-radius: 8px; background: var(--global-bg-color); color: var(--global-text-color); min-height: 44px; font-size: .85rem; }
   .atlas-note { color: var(--global-text-color-light); font-size: .82rem; }
   #photo-map { height: 440px; border-radius: 16px; border: 1px solid var(--global-divider-color); margin: 22px 0 12px; z-index: 0; background: #e3ece8; }
-  .photo-place-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 16px; margin: 24px 0 44px; }
-  .photo-place-card { border: 1px solid var(--global-divider-color); padding: 22px; border-radius: 14px; }
-  .photo-place-card h3 { font-size: 1.1rem; margin: 0 0 10px; }
-  .photo-place-card p { color: var(--global-text-color-light); font-size: .8rem; }
-  .photo-place-card ul { padding-left: 18px; margin: 14px 0 0; font-size: .85rem; }
+  .photo-place-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); align-items: start; gap: 10px; margin: 18px 0 32px; }
+  .photo-place-card { border: 1px solid var(--global-divider-color); border-radius: 10px; min-width: 0; }
+  .photo-place-card summary { position: relative; padding: 14px 34px 14px 16px; cursor: pointer; list-style: none; }
+  .photo-place-card summary::-webkit-details-marker { display: none; }
+  .photo-place-card summary::after { content: "+"; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: var(--global-theme-color); }
+  .photo-place-card[open] summary::after { content: "−"; }
+  .photo-place-card summary:focus-visible { outline: 2px solid var(--global-theme-color); outline-offset: 3px; border-radius: 10px; }
+  .photo-place-name { display: block; font-size: .9rem; font-weight: 600; }
+  .photo-place-count { display: block; margin-top: 4px; color: var(--global-text-color-light); font-size: .75rem; }
+  .photo-place-content { padding: 0 16px 14px; }
+  .photo-place-card ul { padding-left: 16px; margin: 12px 0 0; font-size: .8rem; overflow-wrap: anywhere; }
   .photo-place-card li { margin: 8px 0; }
-  .photo-place-card time { display: block; color: var(--global-text-color-light); font-size: .72rem; }
+  .photo-place-card time { display: block; color: var(--global-text-color-light); font-size: .7rem; }
   .photo-map-marker { border-radius: 50%; background: #163e40; color: #fff; border: 3px solid #dff39e; box-shadow: 0 3px 12px #0004; text-align: center; font: 700 14px/30px sans-serif; }
   .photo-map-marker span { color: #fff !important; }
   .photo-map-cluster { line-height: 34px; border-style: double; border-width: 3px; }

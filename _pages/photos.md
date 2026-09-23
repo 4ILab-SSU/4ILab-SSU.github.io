@@ -22,11 +22,13 @@ nav_order: 6.5
     {% assign place_id = entry[0] %}{% assign place = entry[1] %}
     {% assign place_albums = albums | where: 'place', place_id %}
     {% assign photo_count = 0 %}{% for album in place_albums %}{% assign photo_count = photo_count | plus: album.images.size %}{% endfor %}
-    <article class="photo-place-card" id="place-{{ place_id }}">
-      <h3>{{ place.name }}</h3><p>{{ place.detail }}<br>{{ place_albums.size }}개 앨범 · {{ photo_count }}장</p>
-      <button type="button" data-photo-place="{{ place_id }}" hidden>지도에서 보기 ↗</button>
-      <ul>{% for album in place_albums %}<li><a href="#album-{{ album.date }}"><time>{{ album.date }}</time> {{ album.title }}</a></li>{% endfor %}</ul>
-    </article>
+    <details class="photo-place-card" id="place-{{ place_id }}">
+      <summary><span class="photo-place-name">{{ place.name }}</span><span class="photo-place-count">{{ place_albums.size }}개 앨범 · {{ photo_count }}장</span></summary>
+      <div class="photo-place-content">
+        <button type="button" data-photo-place="{{ place_id }}" hidden>지도에서 보기 ↗</button>
+        <ul>{% for album in place_albums %}<li><a href="#album-{{ album.date }}"><time datetime="{{ album.date }}">{{ album.date }}</time> {{ album.title }}</a></li>{% endfor %}</ul>
+      </div>
+    </details>
   {% endfor %}
   </div>
 </section>
