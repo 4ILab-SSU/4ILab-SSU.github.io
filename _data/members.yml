@@ -116,7 +116,7 @@ groups:
         email: pigminkyo@soongsil.ac.kr
         department: Electronic Engineering (IT)
         since: "2025.03"
-        interests: [Medical Imaging, Deepfake Detection]
+        interests: [Medical Imaging, Synthetic Data Generation]
         links:
           github: https://github.com/minkyo1015
       - name: Seyeon Jeong
