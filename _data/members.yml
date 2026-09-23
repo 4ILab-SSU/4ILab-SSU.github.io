@@ -76,7 +76,7 @@ groups:
         email: abdulwasay@soongsil.ac.kr
         department: AI & Computer Engineering
         since: "2026.09"
-        interests: [Deepfake Detection, Multimodal Learning]
+        interests: [Deepfake Detection, Federated Learning]
         links:
           scholar: https://scholar.google.com/citations?user=nnRFQuoAAAAJ
       - name: Jungmin Lee
