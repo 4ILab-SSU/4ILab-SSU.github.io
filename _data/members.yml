@@ -137,7 +137,7 @@ groups:
         email: suhohan@soongsil.ac.kr
         department: Electronic Engineering (IT)
         since: "2025.03"
-        interests: [Diffusion Model, Deepfake Detection]
+        interests: [Diffusion Model, Image Segmentation]
         links:
           github: https://github.com/suho-han
       - name: Hyeongjun Kim
