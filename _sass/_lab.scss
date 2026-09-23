@@ -242,3 +242,22 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--global-theme-co
 
 .lab-home .home-join p:not(.section-label) { color: #34534b; }
 .spotlight-note { color: #c4d8d0; font-size: 10px; margin: 15px 0 0; }
+
+/* Research-area labels match the lab's typography and muted surfaces. */
+.publication-areas { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 20px 0 28px; }
+.publication-area-key { display: inline-flex; align-items: baseline; gap: 8px; font-size: .78rem; color: var(--global-text-color-light); }
+.publication-area-key strong { color: var(--global-theme-color); letter-spacing: .04em; }
+.publications ol.bibliography li .abbr .research-area-badge {
+  display: flex; flex-direction: column; gap: 7px; padding: 14px 12px;
+  border: 1px solid var(--global-divider-color); border-left: 3px solid var(--area-color, var(--global-theme-color));
+  border-radius: 10px; background: var(--lab-surface); color: var(--global-text-color);
+  text-decoration: none; margin: 0 0 12px; line-height: 1.4;
+}
+.publications .research-area-code { font-size: 1.25rem; font-weight: 700; letter-spacing: .06em; color: var(--global-theme-color); }
+.publications .research-area-name { font-size: .75rem; font-weight: 500; overflow-wrap: anywhere; }
+.publications ol.bibliography li .abbr a.research-area-badge:hover { border-color: var(--global-theme-color); background: var(--global-card-bg-color); }
+.publications h2.bibliography { color: var(--global-text-color-light); font-size: 1.2rem; }
+@media (max-width: 575px) {
+  .publications ol.bibliography li .abbr .research-area-badge { flex-direction: row; align-items: center; gap: 12px; padding: 9px 12px; width: fit-content; }
+  .publications .research-area-code { font-size: 1rem; }
+}
