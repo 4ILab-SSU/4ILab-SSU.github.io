@@ -19,6 +19,9 @@ _data/patents.yml          patents                           → /publications#p
 _data/courses.yml          teaching                          → /teaching
 _data/highlight.yml        "latest research highlight" box   → home
 _data/venues.yml           research-area badges (MI, IP, …)
+_data/photos.yml           photo albums                      → /photos
+_data/calendar.yml         conference calendar               → /calendar
+_data/recruitment.yml      recruitment notice and forms      → /join
 _data/socials.yml          contact / social icons
 _news/*.md                 one file per news item            → /news, home
 _pages/*.md                page text and layout

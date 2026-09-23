@@ -7,7 +7,12 @@ nav: true
 nav_order: 7
 ---
 
-We are always looking for motivated students — undergraduate interns, M.S./Ph.D. students, and postdoctoral researchers — who want to work on AI for imaging and information.
+We welcome inquiries from students interested in AI for imaging and information, including undergraduate research and graduate study.
+
+<div class="contact-block">
+  <h2>Recruitment notice · 모집 안내</h2>
+  <p>{{ site.data.recruitment.notice }}</p>
+</div>
 
 ## Research topics
 
@@ -32,9 +37,17 @@ Send the following documents to <a href="mailto:yoseob.han@ssu.ac.kr">yoseob.han
 2. **(Required)** Academic transcript / 성적증명서
 3. *(Optional)* Portfolio
 
-Applications are reviewed on a rolling basis; recruitment notices for specific programs (e.g. summer undergraduate research) are posted on the [news]({{ '/news/' | relative_url }}) page and the Department of Electronic Engineering notice board.
+### Application forms · 지원 양식
+
+<div class="resource-links">
+  {% for resource in site.data.recruitment.resources %}
+    <a class="link-pill" href="{{ resource.url | escape }}">{{ resource.title | escape }} ↗</a>
+  {% endfor %}
+</div>
+
+Please check the current recruitment notice before submitting an application. For questions about future openings, contact <a href="mailto:{{ site.data.recruitment.email }}">{{ site.data.recruitment.email }}</a>.
 
 <div class="contact-block" style="margin-top:1.5rem">
-  <h3>What you get</h3>
-  <p>Hands-on mentoring, GPU resources, collaboration with hospitals and industry partners, and support for publishing at top venues (Nature Machine Intelligence, IEEE TMI, SIGIR, INTERSPEECH, BMVC, ICASSP, ...).</p>
+  <h3>Explore the lab</h3>
+  <p>Meet our <a href="{{ '/people/' | relative_url }}">members</a>, browse our <a href="{{ '/research/' | relative_url }}">research</a>, and see <a href="{{ '/photos/' | relative_url }}">life at 4ILab</a>.</p>
 </div>

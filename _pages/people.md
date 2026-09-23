@@ -23,7 +23,7 @@ nav_order: 1
       {% endif %}
       <div class="member-card{% if group.id == 'professor' %} member-card-wide{% endif %}">
         {% if photo_file %}
-          <img class="member-photo" src="{{ photo_path | relative_url }}" alt="{{ m.name }}" loading="lazy">
+          <img class="member-photo" src="{{ photo_path | relative_url }}" alt="{{ m.name | escape }}" loading="lazy" decoding="async" width="120" height="120">
         {% else %}
           <div class="member-photo member-photo-placeholder">{{ m.name | slice: 0 }}</div>
         {% endif %}

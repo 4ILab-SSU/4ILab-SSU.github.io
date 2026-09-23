@@ -55,6 +55,7 @@ groups:
           scholar: https://scholar.google.com/citations?user=NHoMp0gAAAAJ
       - name: Soungsill Park
         role: Ph.D.
+        name_ko: 박성실
         photo: soungsill-park.jpg
         email: sspark@ssu.ac.kr
         department: Image Engineering - CG/VR
@@ -68,7 +69,7 @@ groups:
     members:
       - name: Abdul Wasay Sardar
         role: Ph.D. Student
-        photo: abdul-wasay-sardar.jpg
+        photo: abdul-wasay-sardar.png
         email: abdulwasay@soongsil.ac.kr
         department: AI & Computer Engineering
         since: "2026.09"
@@ -76,6 +77,7 @@ groups:
           scholar: https://scholar.google.com/citations?user=nnRFQuoAAAAJ
       - name: Jungmin Lee
         role: M.S. Student
+        name_ko: 이정민
         photo: jungmin-lee.jpg
         email: jungmin@soongsil.ac.kr
         department: Electronic Engineering (IT)
@@ -85,6 +87,7 @@ groups:
           github: https://github.com/peter8366
       - name: Minkyu Kim
         role: M.S. Student
+        name_ko: 김민규
         photo: minkyu-kim.jpg
         email: yiki9098@soongsil.ac.kr
         department: Electronic Engineering (IT)
@@ -94,6 +97,7 @@ groups:
           github: https://github.com/hunzo300
       - name: Gunwoo Lee
         role: M.S. Student
+        name_ko: 이건우
         photo: gunwoo-lee.jpg
         email: gunwoo@soongsil.ac.kr
         department: Electronic Engineering (IT)
@@ -103,6 +107,7 @@ groups:
           github: https://github.com/gunwoo5034
       - name: Minkyo Jung
         role: M.S. Student
+        name_ko: 정민교
         photo: minkyo-jung.jpg
         email: pigminkyo@soongsil.ac.kr
         department: Electronic Engineering (IT)
@@ -113,6 +118,7 @@ groups:
       - name: Seyeon Jeong
         role: M.S. Student
         leader: true
+        name_ko: 정세연
         photo: seyeon-jeong.jpg
         email: seyeonj@soongsil.ac.kr
         department: Electronic Engineering (EE)
@@ -122,6 +128,7 @@ groups:
           github: https://github.com/sysy527
       - name: Suho Han
         role: M.S. Student
+        name_ko: 한수호
         photo: suho-han.jpg
         email: suhohan@soongsil.ac.kr
         department: Electronic Engineering (IT)
@@ -131,36 +138,41 @@ groups:
           github: https://github.com/suho-han
       - name: Hyeongjun Kim
         role: M.S. Student
+        name_ko: 김형준
         photo: hyeongjun-kim.jpg
         email: gudwns1404@soongsil.ac.kr
         department: Electronic Engineering (EE)
         since: "2025.09"
-        links:
-          github: https://github.com/alsckd99
       - name: Minchang Kim
         role: M.S. Student
+        name_ko: 김민창
         photo: minchang-kim.jpg
         email: minchang@soongsil.ac.kr
         department: Computer Software (CS)
         since: "2026.02"
+        links:
+          github: https://github.com/alsckd99
 
   - title: Undergraduate Researchers & Interns
     id: undergraduate
     members:
       - name: Soyoon Lee
         role: B.S. Student
+        name_ko: 이소윤
         photo: soyoon-lee.jpg
         email: syzzang7564@gmail.com
         department: Electronic Engineering (IT)
         since: "2025.11"
       - name: Sunyoung Park
         role: B.S. Student
+        name_ko: 박선영
         photo: sunyoung-park.jpg
         email: sunyoung@soongsil.ac.kr
         department: Electronic Engineering (IT)
         since: "2026.09"
       - name: Yeojoon Yoon
         role: B.S. Student
+        name_ko: 윤여준
         photo: yeojoon-yoon.jpg
         email: joonyoon0225@soongsil.ac.kr
         department: Electronic Engineering (IT)

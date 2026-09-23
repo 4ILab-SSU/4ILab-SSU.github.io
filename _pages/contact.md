@@ -20,7 +20,7 @@ nav_order: 8
   <p>서울특별시 동작구 상도로 369 숭실대학교 전자정보공학부</p>
 </div>
 
-<iframe class="map-embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen
+<iframe class="map-embed" title="Soongsil University, Hyeongnam Engineering Building" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen
   src="https://www.google.com/maps?q=Soongsil+University+Hyeongnam+Engineering+Building&output=embed"></iframe>
 
 <p style="margin-top:1rem">

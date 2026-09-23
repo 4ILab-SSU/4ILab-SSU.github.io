@@ -198,3 +198,13 @@ Ruby 를 직접 쓸 경우: `bundle install && bundle exec jekyll serve`.
 | 한글 제목에 `:` 가 있는데 오류 | 값 전체를 `"따옴표"` 로 감싸기                                             |
 
 문의: 관리자 또는 GitHub Issue(📰/📄/🧑‍🎓 양식) 이용.
+
+## 사진 앨범과 캘린더
+
+- 멤버 사진: `assets/img/members/`에 넣고 `_data/members.yml`의 `photo`를 파일명과 일치시킵니다. 영문 소문자와 하이픈 파일명을 권장합니다. JPEG는 `.jpg`, PNG는 `.png`를 사용하세요.
+- 행사 사진: `assets/img/photos/`에 넣고 `_data/photos.yml`의 해당 행사 `images`에 파일명을 추가합니다. `date`는 따옴표로 감싼 `YYYY-MM-DD`입니다. 사진을 클릭하면 원본 크기로 열립니다.
+- 학회 캘린더: `_data/calendar.yml`에서 Google Calendar 주소와 설명을 변경합니다.
+- 모집 안내·지원 양식: `_data/recruitment.yml`에서 마감 여부 안내 문구와 양식 링크를 변경합니다.
+
+2026-09-23 원본 비교 시 Google Sites의 행사 사진 43장 중 3장만 내려받을 수 있었습니다.
+나머지 사진은 원본 링크로 연결됩니다. 원본 파일을 받으면 위 방식으로 추가하면 됩니다.

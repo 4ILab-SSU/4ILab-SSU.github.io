@@ -54,11 +54,11 @@ latest_posts:
 <div class="lab-stats">
   <div class="lab-stat">
     <div class="lab-stat-value">Top 2%</div>
-    <div class="lab-stat-label">Prof. Yoseob Han, World's Top 2% Scientists (2024)</div>
+    <div class="lab-stat-label">Prof. Yoseob Han, <a href="https://www.hani.co.kr/arti/economy/biznews/1174989.html">World's Top 2% Scientists (2024)</a></div>
   </div>
   <div class="lab-stat">
     <div class="lab-stat-value">5,000+</div>
-    <div class="lab-stat-label">Google Scholar citations</div>
+    <div class="lab-stat-label"><a href="https://scholar.google.com/citations?user=awRbnvQAAAAJ">Google Scholar citations</a><br><small>As reported on the original lab website</small></div>
   </div>
   <div class="lab-stat">
     <div class="lab-stat-value">Top-tier</div>
@@ -76,5 +76,17 @@ latest_posts:
       <b>{{ item.title }}</b> — {{ item.authors }}{% if item.url %} · <a href="{{ item.url }}">link</a>{% endif %}<br>
     {% endfor %}
     {% if h.note %}<span>{{ h.note }}</span>{% endif %}
+  </div>
+</div>
+
+<h2 class="lab-section-title">life at 4ILab</h2>
+<div class="lab-grid">
+  <div class="lab-card">
+    <div class="lab-card-title"><a href="{{ '/photos/' | relative_url }}">Lab photo albums</a></div>
+    <p class="lab-card-text">Conferences, graduations, and celebrations with our team.</p>
+  </div>
+  <div class="lab-card">
+    <div class="lab-card-title"><a href="{{ '/calendar/' | relative_url }}">Conference calendar</a></div>
+    <p class="lab-card-text">Upcoming AI conference calls for papers and deadlines.</p>
   </div>
 </div>

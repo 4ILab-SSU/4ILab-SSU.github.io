@@ -6,6 +6,10 @@ description: Assistant Professor · IT Convergence Major, Department of Electron
 nav: false
 ---
 
+{% assign professor = site.data.members.groups | where: 'id', 'professor' | first %}
+{% assign professor = professor.members | first %}
+<div class="professor-intro">
+  <img class="professor-portrait" src="{{ professor.photo | prepend: '/assets/img/members/' | relative_url }}" alt="Yoseob Han · 한요섭" width="180" height="232">
 <div class="contact-block">
   <p>🏢 Room 1106, Hyeongnam Engineering Building (형남공학관), Soongsil University</p>
   <p>📞 +82-2-828-7150 &nbsp;·&nbsp; ✉️ <a href="mailto:yoseob.han@ssu.ac.kr">yoseob.han@ssu.ac.kr</a></p>
@@ -16,6 +20,7 @@ nav: false
     <a class="link-pill" href="https://www.youtube.com/@hanyoseob">YouTube</a>
     <a class="link-pill" href="https://edu.goorm.io/lecture/19373/">Goorm EDU lecture</a>
   </p>
+</div>
 </div>
 
 Yoseob Han is an Assistant Professor in the Department of Electronic Engineering at Soongsil University, where he leads 4ILab. His research focuses on solving inverse problems in imaging with deep learning — from CT/MRI reconstruction and interior tomography to multimodal generation, retrieval and deepfake detection. He was selected as one of the World's Top 2% Scientists in 2024.

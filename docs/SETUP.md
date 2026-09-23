@@ -56,9 +56,9 @@ git push -u origin main
 
 ## 6. 남은 할 일 (콘텐츠)
 
-- [ ] 멤버 사진을 `assets/img/members/` 에 업로드 (파일명은 `_data/members.yml` 의 `photo:` 값과 동일: `yoseob-han.jpg`, `jungmin-lee.jpg`, …)
+- [x] 멤버 사진 15장 등록 완료. 이후 추가/교체는 `_data/members.yml`의 `photo:` 값과 파일명을 맞추세요.
 - [ ] 필요하면 연구실 로고/단체 사진을 `assets/img/` 에 넣고 `_pages/about.md` 의 `profile:` 주석 해제
-- [ ] Google Sites 의 Photos 페이지를 옮기려면 `_pages/photos.md` 를 만들고 `assets/img/photos/` 에 이미지 추가 (원하면 요청하세요)
+- [ ] Photos 미이전 사진 40장 추가: `assets/img/photos/`에 파일을 넣고 `_data/photos.yml`에 연결 (행사 기록 10건·사진 3장은 이전 완료)
 - [ ] 기존 Google Sites 첫 화면에 안내 문구 + 새 주소 링크 추가 (또는 Google Sites 삭제)
 - [ ] 학교 도메인(예: `4ilab.ssu.ac.kr`)을 쓰려면 DNS CNAME 을 `4ilab-ssu.github.io` 로 두고 Settings → Pages → Custom domain 입력; `_config.yml` 의 `url:` 도 함께 변경
 
