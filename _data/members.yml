@@ -147,7 +147,7 @@ groups:
         email: gudwns1404@soongsil.ac.kr
         department: Electronic Engineering (EE)
         since: "2025.09"
-        interests: [Object Detection, Gaussian Splatting]
+        interests: [Object Detection, Synthetic Data Generation]
       - name: Minchang Kim
         role: M.S. Student
         name_ko: 김민창
