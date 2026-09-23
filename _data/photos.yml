@@ -2,6 +2,7 @@
 - date: '2026-06-23'
   title: '대한전자공학회 하계종합학술대회'
   location: '롯데호텔, 제주'
+  place: lotte-jeju
   images:
     - '2026-06-23-01.jpg'
     - '2026-06-23-02.jpg'
@@ -15,13 +16,15 @@
     - '2026-06-23-10.jpg'
 - date: '2026-05-15'
   title: '스승의 날'
-  location: ''
+  location: '숭실대학교'
+  place: soongsil
   images:
     - '2026-05-15-01.jpg'
     - '2026-05-15-02.jpg'
 - date: '2026-01-18'
   title: 'International Conference on Electronics, Information, and Communication (ICEIC)'
   location: 'MGM COTAI, Macau'
+  place: mgm-cotai
   images:
     - '2026-01-18-01.jpg'
     - '2026-01-18-02.jpg'
@@ -34,7 +37,8 @@
     - '2026-01-18-09.jpg'
 - date: '2025-12-17'
   title: '미리 메리 크리스마스'
-  location: ''
+  location: '숭실대학교'
+  place: soongsil
   images:
     - '2025-12-17-01.jpg'
     - '2025-12-17-02.jpg'
@@ -45,7 +49,8 @@
     - '2025-12-17-07.jpg'
 - date: '2025-12-04'
   title: '교수님 생일'
-  location: ''
+  location: '숭실대학교'
+  place: soongsil
   images:
     - '2025-12-04-01.jpg'
     - '2025-12-04-02.jpg'
@@ -53,6 +58,7 @@
 - date: '2025-09-23'
   title: 'MICCAI 2025'
   location: 'Daejeon, Korea'
+  place: daejeon
   images:
     - '2025-09-23-01.jpg'
     - '2025-09-23-02.jpg'
@@ -60,17 +66,21 @@
 - date: '2025-06-18'
   title: '한국통신학회 하계종합학술발표회'
   location: '신화월드, 제주'
+  place: shinhwa-jeju
   images:
     - '2025-06-18-01.jpg'
 - date: '2025-05-15'
   title: '스승의 날'
-  location: ''
+  location: '숭실대학교'
+  place: soongsil
   images:
     - '2025-05-15-01.jpg'
     - '2025-05-15-02.jpg'
 - date: '2025-02-21'
   title: '졸업식'
-  location: '김민규, 이건우, 이정민, 정민교, 정세연, 한수호'
+  location: '숭실대학교'
+  place: soongsil
+  caption: '졸업생: 김민규, 이건우, 이정민, 정민교, 정세연, 한수호'
   images:
     - '2025-02-21-01.jpg'
     - '2025-02-21-02.jpg'
@@ -79,6 +89,7 @@
     - '2025-02-21-05.jpg'
 - date: '2023-02-27'
   title: '신임교원 발령장 수여식'
-  location: ''
+  location: '숭실대학교'
+  place: soongsil
   images:
     - '2023-02-27-01.png'

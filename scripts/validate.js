@@ -52,6 +52,42 @@ for (const f of fs.readdirSync(dataDir).filter((f) => f.endsWith(".yml"))) {
   data[f.replace(/\.yml$/, "")] = loadYaml(path.join(dataDir, f));
 }
 
+// --- conferences.yml
+if (data.conferences) {
+  console.log("Validating _data/conferences.yml");
+  const validDate = (value) => typeof value === "string" && /^\d{4}-\d{2}-\d{2}$/.test(value) &&
+    !Number.isNaN(Date.parse(value)) && new Date(value).toISOString().slice(0, 10) === value;
+  if (!validDate(data.conferences.checked_on)) fail("conferences.yml: checked_on must be a quoted YYYY-MM-DD date");
+  const ids = new Set();
+  for (const conference of data.conferences.conferences || []) {
+    const label = `conferences.yml (${conference.name || "unnamed"})`;
+    if (!conference.id || !/^[a-z0-9-]+$/.test(conference.id) || ids.has(conference.id)) fail(`${label}: missing, invalid or duplicate id`);
+    ids.add(conference.id);
+    if (!conference.name || !/^https:\/\//.test(conference.source || "")) fail(`${label}: name and official HTTPS source required`);
+    if (!Array.isArray(conference.events)) { fail(`${label}: events must be a list (use [] for TBA)`); continue; }
+    for (const event of conference.events) {
+      if (!validDate(event.date)) fail(`${label}: invalid event date; use quoted YYYY-MM-DD`);
+      if (event.end_date && (!validDate(event.end_date) || event.end_date < event.date)) fail(`${label}: invalid end_date or date range`);
+      if (!event.label || !["deadline", "notification", "registration", "conference"].includes(event.type)) fail(`${label}: event needs label and valid type`);
+      if (event.zone && event.zone !== "AoE") fail(`${label}: zone must be AoE or omitted`);
+    }
+  }
+}
+
+// --- photo locations and album links
+if (data.photo_places) {
+  for (const [id, place] of Object.entries(data.photo_places)) {
+    if (!place.name || !Number.isFinite(place.lat) || Math.abs(place.lat) > 90 || !Number.isFinite(place.lng) || Math.abs(place.lng) > 180)
+      fail(`photo_places.yml (${id}): name and valid numeric lat/lng required`);
+  }
+}
+for (const album of data.photos || []) {
+  if (album.place && !data.photo_places?.[album.place]) fail(`photos.yml (${album.date}): unknown place "${album.place}"`);
+  for (const photo of album.images || []) {
+    if (!fs.existsSync(path.join(root, "assets/img/photos", photo))) fail(`photos.yml: missing image "${photo}"`);
+  }
+}
+
 // --- members.yml
 if (data.members) {
   console.log("Validating _data/members.yml");

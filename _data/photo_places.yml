@@ -1,0 +1,36 @@
+# 앨범의 place 값으로 연결합니다. 좌표는 장소의 대표 위치입니다.
+soongsil:
+  name: 숭실대학교
+  detail: 서울 · 캠퍼스 대표 위치
+  lat: 37.496294
+  lng: 126.956269
+  zoom: 15
+  source: https://www.wikidata.org/wiki/Q489331
+lotte-jeju:
+  name: 롯데호텔 제주
+  detail: 제주 · 행사 장소 대표 위치
+  lat: 33.248458
+  lng: 126.410549
+  zoom: 15
+  source: https://visitjeju.net/en/detail/view?contentsid=CONT_000000000500859
+mgm-cotai:
+  name: MGM COTAI
+  detail: 마카오 · 행사 장소 대표 위치
+  lat: 22.14581
+  lng: 113.568
+  zoom: 15
+  source: https://www.openstreetmap.org/way/747481242
+daejeon:
+  name: 대전
+  detail: 도시 단위 위치 · 세부 촬영지 미등록
+  lat: 36.35
+  lng: 127.385
+  zoom: 11
+  source: https://wiki.openstreetmap.org/wiki/Daejeon
+shinhwa-jeju:
+  name: 제주신화월드
+  detail: 제주 · 행사 장소 대표 위치
+  lat: 33.30641
+  lng: 126.31598
+  zoom: 14
+  source: https://www.openstreetmap.org/way/712591931

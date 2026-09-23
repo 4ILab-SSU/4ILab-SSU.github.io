@@ -218,7 +218,30 @@ Ruby 를 직접 쓸 경우: `bundle install && bundle exec jekyll serve`.
 
 - 멤버 사진: `assets/img/members/`에 넣고 `_data/members.yml`의 `photo`를 파일명과 일치시킵니다. 영문 소문자와 하이픈 파일명을 권장합니다. JPEG는 `.jpg`, PNG는 `.png`를 사용하세요.
 - 행사 사진: `assets/img/photos/`에 넣고 `_data/photos.yml`의 해당 행사 `images`에 파일명을 추가합니다. `date`는 따옴표로 감싼 `YYYY-MM-DD`입니다. 사진을 클릭하면 원본 크기로 열립니다.
-- 학회 캘린더: `_data/calendar.yml`에서 Google Calendar 주소와 설명을 변경합니다.
+- 학회 캘린더: `_data/conferences.yml`에서 학회별 공식 일정과 출처를 변경합니다.
 - 모집 안내·지원 양식: `_data/recruitment.yml`에서 마감 여부 안내 문구와 양식 링크를 변경합니다.
 
 행사 사진 43장(10개 앨범)이 모두 등록되어 있습니다. 파일명은 `YYYY-MM-DD-NN.jpg` 또는 `.png`로 통일합니다. 예: `2026-06-23-01.jpg`. 날짜는 행사 시작일, 순번은 앨범 내 두 자리 번호입니다. 확장자는 실제 이미지 형식과 맞춰 주세요.
+
+## AI 학회 일정 (Calendar)
+
+`_data/conferences.yml`만 편집하면 월별 달력과 학회별 상세 일정에 함께 반영됩니다.
+
+- `checked_on`: 공식 페이지를 마지막으로 확인한 날짜.
+- `conferences`: 학회별 `id`(고유 영문), `name`, `area`, `location`, `source`(공식 URL), `note`, `events`.
+- `events`: `date`와 `label`, `type`을 입력합니다. 날짜는 `"2027-01-21"`처럼 따옴표로 감쌉니다.
+- `type`: `deadline`(논문·자료 마감), `notification`(발표), `registration`(참가 등록), `conference`(개최).
+- 여러 날 개최하는 학회는 `end_date`에 마지막 날을 포함하여 적습니다.
+- 공식 공지에 AoE가 명시되어 있을 때만 `zone: "AoE"`를 사용합니다. 마감 일정에는 다음 날 20:59 한국 시간도 표시합니다. 시각이 미공개이면 `zone`을 생략합니다.
+- 잠정 일정은 학회에 `tentative: true`를 설정합니다. 미발표 일정은 날짜를 추정하지 말고 `events: []`와 설명을 남깁니다.
+
+달력 칸은 공식 공지 날짜를 사용하며, 향후 일정은 한국 시간 기준으로 표시합니다. 과거 제출 일정도 학회별 상세 표에서 확인할 수 있습니다. 외부 Google Calendar와 자동 동기화하지 않습니다.
+
+## Photos 지도
+
+- `_data/photos.yml`의 `place`를 `_data/photo_places.yml`의 장소 ID와 연결합니다. 예: `place: soongsil`.
+- 장소를 추가할 때는 `name`, `detail`, 위도 `lat`, 경도 `lng`, 확대 수준 `zoom`, 좌표 확인 출처 `source`를 입력합니다.
+- 지도 핀은 같은 장소의 앨범들을 묶고, 팝업에서 각 앨범으로 연결합니다. 핀의 숫자는 앨범 수입니다.
+- 행사 장소의 대표 좌표를 사용합니다. 개별 사진의 GPS로 오해하지 않도록 도시 단위 위치는 `detail`에 명시하세요.
+- `location`은 장소 표시용, `caption`은 졸업생 명단 같은 부가 설명용입니다.
+- 지도 라이브러리 Leaflet 1.9.4와 MarkerCluster 1.5.3은 `assets/leaflet/`에 포함되어 있습니다. 지도 배경은 OpenStreetMap을 사용하며 인터넷 연결이 필요합니다. 배경을 불러오지 못해도 장소별 앨범 목록을 이용할 수 있습니다.
