@@ -86,7 +86,7 @@ groups:
         email: jungmin@soongsil.ac.kr
         department: Electronic Engineering (IT)
         since: "2025.03"
-        interests: [Image Processing, Multimodal Learning]
+        interests: [Gaze Estimation, Multimodal Learning]
         links:
           github: https://github.com/peter8366
       - name: Minkyu Kim
