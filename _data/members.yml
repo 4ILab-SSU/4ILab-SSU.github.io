@@ -17,6 +17,8 @@
 #   until       : "YYYY.MM"   only for alumni
 #   leader      : true        marks a research-team leader (shows a star)
 #   interests   : list of keywords (optional)
+#                 Member badges synced from the original Members page, 2026-09-23:
+#                 https://sites.google.com/ssu.ac.kr/4ilab/people/members
 #   links       : github / scholar / linkedin / homepage (all optional)
 #
 # Groups are rendered in the order they appear here.
@@ -50,7 +52,7 @@ groups:
         email: niamat016@ssu.ac.kr
         department: AI & Computer Engineering
         since: "2026.03"
-        interests: [Gaze estimation, Computer vision]
+        interests: [Medical Imaging, Multimodal Learning]
         links:
           scholar: https://scholar.google.com/citations?user=NHoMp0gAAAAJ
       - name: Soungsill Park
@@ -60,6 +62,7 @@ groups:
         email: sspark@ssu.ac.kr
         department: Image Engineering - CG/VR
         since: "2025.03"
+        interests: [Medical Imaging, Multimodal Learning]
         links:
           github: https://github.com/soungsill
 
@@ -73,6 +76,7 @@ groups:
         email: abdulwasay@soongsil.ac.kr
         department: AI & Computer Engineering
         since: "2026.09"
+        interests: [Deepfake Detection, Multimodal Learning]
         links:
           scholar: https://scholar.google.com/citations?user=nnRFQuoAAAAJ
       - name: Jungmin Lee
@@ -82,7 +86,7 @@ groups:
         email: jungmin@soongsil.ac.kr
         department: Electronic Engineering (IT)
         since: "2025.03"
-        interests: [Deepfake detection, Gaze estimation, Medical image processing]
+        interests: [Image Processing, Multimodal Learning]
         links:
           github: https://github.com/peter8366
       - name: Minkyu Kim
@@ -92,7 +96,7 @@ groups:
         email: yiki9098@soongsil.ac.kr
         department: Electronic Engineering (IT)
         since: "2025.03"
-        interests: [Medical image segmentation]
+        interests: [Object Detection, Medical Imaging]
         links:
           github: https://github.com/hunzo300
       - name: Gunwoo Lee
@@ -102,7 +106,7 @@ groups:
         email: gunwoo@soongsil.ac.kr
         department: Electronic Engineering (IT)
         since: "2025.03"
-        interests: [Multimodal learning, Speech synthesis, Deepfake audio detection]
+        interests: [Multimodal Learning, Diffusion Model]
         links:
           github: https://github.com/gunwoo5034
       - name: Minkyo Jung
@@ -112,7 +116,7 @@ groups:
         email: pigminkyo@soongsil.ac.kr
         department: Electronic Engineering (IT)
         since: "2025.03"
-        interests: [CT reconstruction, Medical image processing]
+        interests: [Medical Imaging, Deepfake Detection]
         links:
           github: https://github.com/minkyo1015
       - name: Seyeon Jeong
@@ -123,7 +127,7 @@ groups:
         email: seyeonj@soongsil.ac.kr
         department: Electronic Engineering (EE)
         since: "2025.03"
-        interests: [Multimodal learning, Speech enhancement]
+        interests: [Language Processing, Multimodal Learning]
         links:
           github: https://github.com/sysy527
       - name: Suho Han
@@ -133,7 +137,7 @@ groups:
         email: suhohan@soongsil.ac.kr
         department: Electronic Engineering (IT)
         since: "2025.03"
-        interests: [Diffusion-based segmentation, Interactive segmentation]
+        interests: [Diffusion Model, Deepfake Detection]
         links:
           github: https://github.com/suho-han
       - name: Hyeongjun Kim
@@ -143,6 +147,7 @@ groups:
         email: gudwns1404@soongsil.ac.kr
         department: Electronic Engineering (EE)
         since: "2025.09"
+        interests: [Object Detection, Medical Imaging]
       - name: Minchang Kim
         role: M.S. Student
         name_ko: 김민창
@@ -150,6 +155,7 @@ groups:
         email: minchang@soongsil.ac.kr
         department: Computer Software (CS)
         since: "2026.02"
+        interests: [Deepfake Detection, Language Processing]
         links:
           github: https://github.com/alsckd99
 
