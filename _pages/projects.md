@@ -36,4 +36,7 @@ nav_order: 4
 
 ## Open-source code
 
-Our public code lives in the <a href="https://github.com/4ILab-SSU">4ILab-SSU GitHub organization</a>. Per-paper repositories are linked with a <b>CODE</b> button on the [publications]({{ '/publications/' | relative_url }}) page.
+Our public code is available on GitHub. Paper-specific repositories are linked from the publications page.
+
+<a class="link-pill" href="https://github.com/4ILab-SSU">GitHub ↗</a>
+<a class="link-pill" href="{{ '/publications/' | relative_url }}">Publications →</a>

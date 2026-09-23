@@ -1,0 +1,2 @@
+{% assign news_key = include.item.path | split: '/' | last %}
+{% if page.lang == 'ko' and site.data.news_ko[news_key] %}{{ site.data.news_ko[news_key] | markdownify }}{% else %}{{ include.item.content | markdownify }}{% endif %}

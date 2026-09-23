@@ -3,6 +3,8 @@
   'use strict';
   const data = document.getElementById('conference-data');
   if (!data) return;
+  const t = window.labTranslate || (text => text);
+  const lang = document.documentElement.lang;
   const now = new Date();
   const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Seoul', year: 'numeric', month: '2-digit', day: '2-digit' }).format(now);
   let month = new Date(`${today.slice(0, 7)}-01T00:00:00Z`);
@@ -16,7 +18,7 @@
     return node;
   };
   function link(event) {
-    const node = element('a', `${event.conference.tentative ? '[잠정] ' : ''}${event.conference.name} · ${event.label}`, `calendar-event calendar-${event.type}`);
+    const node = element('a', `${event.conference.tentative ? `[${t('잠정')}] ` : ''}${event.conference.name} · ${event.label}`, `calendar-event calendar-${event.type}`);
     node.href = `#${event.conference.id}`;
     node.title = `${event.date}${event.end_date ? ' – ' + event.end_date : ''} ${event.zone || ''} · ${event.label}`;
     return node;
@@ -24,9 +26,9 @@
   function render() {
     const filter = document.getElementById('calendar-filter').value;
     const visible = events.filter(event => filter === 'all' || event.type === filter);
-    const title = `${month.getUTCFullYear()}년 ${month.getUTCMonth() + 1}월`;
+    const title = new Intl.DateTimeFormat(lang === 'ko' ? 'ko-KR' : 'en-US', {year: 'numeric', month: 'long', timeZone: 'UTC'}).format(month);
     document.getElementById('calendar-month').textContent = title;
-    document.getElementById('calendar-caption').textContent = `${title} · 공식 공지 날짜 기준`;
+    document.getElementById('calendar-caption').textContent = `${title} · ${t('공식 공지 날짜 기준')}`;
     const body = document.getElementById('calendar-days');
     body.replaceChildren();
     const first = month.getUTCDay();
@@ -50,13 +52,13 @@
       ? new Date(`${event.date}T23:59:59-12:00`)
       : new Date(`${event.end_date || event.date}T23:59:59+09:00`);
     const next = visible.filter(event => end(event) >= now).sort((a, b) => a.date.localeCompare(b.date)).slice(0, 8);
-    if (!next.length) upcoming.append(element('p', '등록된 향후 일정이 없습니다. 아래 공식 페이지에서 새 공지를 확인하세요.'));
+    if (!next.length) upcoming.append(element('p', t('등록된 향후 일정이 없습니다. 아래 공식 페이지에서 새 공지를 확인하세요.')));
     next.forEach(event => {
       const row = element('div', '', 'calendar-upcoming-item');
       row.append(link(event));
       let timing = `${event.date}${event.end_date ? ' – ' + event.end_date : ''}${event.zone ? ' ' + event.zone : ''}`;
-      if (event.zone === 'AoE' && event.type !== 'notification') timing += ` · 한국 ${nextDay(event.date)} 20:59`;
-      else if (event.type !== 'conference') timing += ' · 발표/마감 시각은 공식 공지 확인';
+      if (event.zone === 'AoE' && event.type !== 'notification') timing += ` · ${t('한국')} ${nextDay(event.date)} 20:59`;
+      else if (event.type !== 'conference') timing += ` · ${t('발표/마감 시각은 공식 공지 확인')}`;
       row.append(element('span', timing));
       upcoming.append(row);
     });

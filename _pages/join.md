@@ -31,7 +31,11 @@ We welcome inquiries from students interested in AI for imaging and information,
 
 ## How to apply
 
+{% if page.lang == 'ko' %}
+다음 서류를 <a href="mailto:yoseob.han@ssu.ac.kr">yoseob.han@ssu.ac.kr</a>로 보내주세요.
+{% else %}
 Send the following documents to <a href="mailto:yoseob.han@ssu.ac.kr">yoseob.han@ssu.ac.kr</a>:
+{% endif %}
 
 1. **(Required)** Statement of purpose / 자기소개서
 2. **(Required)** Academic transcript / 성적증명서
@@ -49,5 +53,9 @@ Please check the current recruitment notice before submitting an application. Fo
 
 <div class="contact-block" style="margin-top:1.5rem">
   <h3>Explore the lab</h3>
+  {% if page.lang == 'ko' %}
+  <p><a href="{{ '/people/' | relative_url }}">구성원</a>과 <a href="{{ '/research/' | relative_url }}">연구</a>를 살펴보고, <a href="{{ '/photos/' | relative_url }}">연구실 생활</a>도 만나보세요.</p>
+  {% else %}
   <p>Meet our <a href="{{ '/people/' | relative_url }}">members</a>, browse our <a href="{{ '/research/' | relative_url }}">research</a>, and see <a href="{{ '/photos/' | relative_url }}">life at 4ILab</a>.</p>
+  {% endif %}
 </div>

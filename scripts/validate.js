@@ -52,6 +52,20 @@ for (const f of fs.readdirSync(dataDir).filter((f) => f.endsWith(".yml"))) {
   data[f.replace(/\.yml$/, "")] = loadYaml(path.join(dataDir, f));
 }
 
+// --- bilingual copy and translated news
+if (data.i18n) {
+  for (const lang of ["en", "ko"]) {
+    if (!data.i18n[lang] || typeof data.i18n[lang] !== "object") fail(`i18n.yml: missing ${lang} dictionary`);
+    for (const [key, value] of Object.entries(data.i18n[lang] || {})) {
+      if (!key.trim() || typeof value !== "string" || !value.trim()) fail(`i18n.yml (${lang}): translations must be non-empty strings`);
+    }
+  }
+}
+for (const [name, body] of Object.entries(data.news_ko || {})) {
+  if (!fs.existsSync(path.join(root, "_news", name))) fail(`news_ko.yml: no source news file "${name}"`);
+  if (typeof body !== "string" || !body.trim()) fail(`news_ko.yml: empty Korean news "${name}"`);
+}
+
 // --- conferences.yml
 if (data.conferences) {
   console.log("Validating _data/conferences.yml");

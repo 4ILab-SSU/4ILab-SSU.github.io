@@ -54,3 +54,9 @@ See [docs/SETUP.md](docs/SETUP.md).
 ## License
 
 Site content © 4ILab. Theme: al-folio, MIT License (see `LICENSE`).
+
+The site is available in English at `/` and Korean at `/ko/`. Use the header's
+**EN | KO** switch to keep the current page when changing languages. Shared pages
+and datasets generate both editions; UI translations live in `_data/i18n.yml`,
+and Korean news bodies in `_data/news_ko.yml`. After building, run
+`bundle exec ruby scripts/validate-locales.rb` to check language routes and content.

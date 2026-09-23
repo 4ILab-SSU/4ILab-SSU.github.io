@@ -12,7 +12,7 @@ nav_order: 6.6
     <span class="calendar-eyebrow">RESEARCH, ON THE HORIZON</span>
     <h2>Your next deadline.<br>Your next discovery.</h2>
     <p>AI · 컴퓨터 비전 · 의료영상 · 음성 분야의 주요 학회 일정을 한곳에서 확인하세요.</p>
-    <p class="calendar-note">공식 출처 확인: {{ site.data.conferences.checked_on }} · {{ site.data.conferences.conferences.size }}개 학회<br>
+    <p class="calendar-note"><span>공식 출처 확인</span>: {{ site.data.conferences.checked_on }} · {{ site.data.conferences.conferences.size }} <span>개 학회</span><br>
     달력은 <strong>공식 공지 날짜</strong> 기준입니다. AoE(UTC−12) 마감은 한국 시간으로 다음 날 20:59이며, 날짜만 발표된 일정은 시각을 임의로 지정하지 않았습니다. 발표 일정의 AoE 표기는 발표 시간 보장을 뜻하지 않습니다.</p>
   </div>
   <section id="calendar-interactive" hidden aria-label="월별 학회 달력">

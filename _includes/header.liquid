@@ -6,6 +6,10 @@
         <span class="brand-symbol" aria-hidden="true">4I<span></span></span>
         <span class="brand-name">4ILab<small>SOONGSIL UNIVERSITY</small></span>
       </a>
+      {% assign language_path = page.language_path | default: '/' %}
+      <div class="language-switch" aria-label="Language">
+        <a href="{{ language_path | relative_url }}" lang="en" hreflang="en" data-preserve-language="true" data-language-switch="en"{% unless page.lang == 'ko' %} aria-current="true"{% endunless %}>EN</a><span aria-hidden="true">|</span><a href="{{ language_path | prepend: '/ko' | relative_url }}" lang="ko" hreflang="ko" data-preserve-language="true" data-language-switch="ko"{% if page.lang == 'ko' %} aria-current="true"{% endif %}>KO</a>
+      </div>
       <!-- Navbar Toggle -->
       <button
         class="navbar-toggler collapsed navbar-toggler-main"
@@ -23,8 +27,8 @@
 
       <div class="navbar-collapse-main" id="navbarNav">
         <ul class="navbar-nav navbar-menu-list flex-nowrap">
-          <li class="nav-item {% if page.url == '/' %}active{% endif %}">
-            <a class="nav-link" href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a>
+          <li class="nav-item {% if page.language_path == '/' %}active{% endif %}">
+            <a class="nav-link" href="{{ '/' | relative_url }}"{% if page.language_path == '/' %} aria-current="page"{% endif %}>Home</a>
           </li>
           <!-- Other pages -->
           {% assign sorted_pages = site.pages | sort: 'nav_order' %}
@@ -118,3 +122,5 @@
     </progress>
   {% endif %}
 </header>
+
+<script src="{{ '/assets/js/language.js' | relative_url }}" defer></script>

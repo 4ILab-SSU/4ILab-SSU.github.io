@@ -4,6 +4,21 @@
 #   emoji   : optional
 #   courses : list of { code, title, url (optional) }
 
+- term: 2026 Fall
+  emoji: 🍁
+  courses:
+    - { code: "2150097801", title: Advanced Artificial Neural Networks }
+    - { code: "5052308201", title: Parallel Programming }
+    - { code: "5037434801", title: Image Recognition and Deep Learning }
+
+- term: 2026 Spring
+  emoji: 🌱
+  courses:
+    - { code: "2150443802", title: Digital Engineering }
+    - { code: "2150443803", title: Digital Engineering }
+    - { code: "5055460401", title: Multimodal Artificial Intelligence }
+    - { code: "5037453601", title: Deep Learning Basics }
+
 - term: 2025 Fall
   emoji: 🍁
   courses:

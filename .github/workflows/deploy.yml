@@ -47,6 +47,7 @@ jobs:
         run: |
           export JEKYLL_ENV=production
           bundle exec jekyll build
+          bundle exec ruby scripts/validate-locales.rb
 
       - name: Purge unused CSS 🧹
         run: |

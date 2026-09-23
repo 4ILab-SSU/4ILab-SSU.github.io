@@ -14,4 +14,6 @@ children:
     permalink: /calendar/
 ---
 
-Explore [lab news]({{ '/news/' | relative_url }}), [photo albums]({{ '/photos/' | relative_url }}), and our [conference calendar]({{ '/calendar/' | relative_url }}).
+- [Lab news]({{ '/news/' | relative_url }})
+- [Photo albums]({{ '/photos/' | relative_url }})
+- [Conference calendar]({{ '/calendar/' | relative_url }})

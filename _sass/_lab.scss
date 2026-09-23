@@ -39,12 +39,12 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--global-theme-co
   .nav-join { background: #173c3e; color: #fff !important; padding: 10px 17px; border-radius: 4px; margin: 0 7px; }
   .dropdown-item { text-transform: capitalize; font-size: 14px; }
 }
-@media (min-width: 1060px) {
+@media (min-width: 1200px) {
   #navbar .navbar-collapse-main { display: flex !important; flex-basis: auto; }
   #navbar .navbar-toggler-main { display: none; }
   #navbar .navbar-menu-list { flex-direction: row; }
 }
-@media (max-width: 1059px) {
+@media (max-width: 1199px) {
   #navbar .container { flex-wrap: wrap; }
   #navbar .navbar-toggler-main { display: block; margin-left: auto; }
   #navbar .navbar-collapse-main { flex-basis: 100%; width: 100%; }
@@ -264,4 +264,16 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--global-theme-co
 @media (max-width: 575px) {
   .publications ol.bibliography li .abbr .research-area-badge { flex-direction: row; align-items: center; gap: 12px; padding: 8px; width: fit-content; }
   .publications .research-area-code { min-width: 44px; height: 38px; font-size: 1.1rem; }
+}
+
+#navbar .language-switch { display: flex; align-items: center; gap: 7px; white-space: nowrap; order: 3; font-size: 12px; }
+#navbar .language-switch a { color: var(--global-text-color-light); padding: 8px 2px; }
+#navbar .language-switch a[aria-current] { color: var(--global-theme-color); font-weight: 800; text-decoration: underline; text-underline-offset: 5px; }
+#navbar .lab-brand { order: 1; }
+#navbar .navbar-collapse-main { order: 2; }
+#navbar .navbar-toggler-main { order: 4; }
+@media (max-width: 1199px) {
+  #navbar .language-switch { order: 2; margin-left: auto; }
+  #navbar .navbar-toggler-main { order: 3; margin-left: 0; }
+  #navbar .navbar-collapse-main { order: 4; }
 }
