@@ -2,7 +2,15 @@
 title: Two papers accepted to BMVC 2026 🎉
 items:
   - title: "Watch Your Speech: Text-aware Video-to-Speech Synthesis with Textual Conditioning"
+    short_title: Watch Your Speech
+    venue: BMVC 2026
+    summary: "영상에 텍스트 정보를 더해, 말소리를 생성하는 방법을 연구합니다."
+    url: /publications/#lee2026watchyourspeech
     authors: Gunwoo Lee*, Yoori Oh*, Yoseob Han
   - title: "EyeTAG: Eye Trajectory-Aware Gaze Estimation"
+    short_title: EyeTAG
+    venue: BMVC 2026
+    summary: "눈의 움직임을 따라가며, 시선의 방향을 더 잘 이해하는 방법을 탐구합니다."
+    url: /publications/#lee2026eyetag
     authors: Jungmin Lee, Niamat Ullah⁺, Yoseob Han⁺
 note: "* equal contribution · ⁺ corresponding authors"

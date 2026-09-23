@@ -1,0 +1,33 @@
+<svg viewBox="0 0 360 180" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+{% case include.kind %}
+{% when 'imaging' %}
+  <g stroke="currentColor" opacity=".2">
+    <path d="M0 30H360M0 60H360M0 90H360M0 120H360M0 150H360M30 0V180M60 0V180M90 0V180M120 0V180M150 0V180M180 0V180M210 0V180M240 0V180M270 0V180M300 0V180M330 0V180"/>
+  </g>
+  <g stroke="currentColor" stroke-width="1.5">
+    <ellipse cx="180" cy="90" rx="74" ry="67"/><ellipse cx="180" cy="90" rx="59" ry="53" opacity=".65"/><ellipse cx="180" cy="90" rx="43" ry="39" opacity=".4"/>
+    <path d="M149 69C123 88 146 127 171 106C184 89 151 85 164 63M197 60C229 66 225 119 202 116C187 113 199 95 188 81"/>
+    <path d="M83 90H277M180 9V171" stroke-dasharray="3 5" opacity=".5"/>
+    <path d="M94 35V18H112M248 18H266V35M94 145V162H112M248 162H266V145" stroke-width="3"/>
+  </g>
+{% when 'multimodal' %}
+  <g stroke="currentColor" stroke-width="1.5">
+    <path d="M90 55L180 95L273 50M180 95L268 137M90 55L268 137" opacity=".35"/>
+    <circle cx="180" cy="95" r="26"/><circle cx="180" cy="95" r="36" stroke-dasharray="3 5" opacity=".4"/>
+    <rect x="43" y="28" width="84" height="52" rx="8"/><path d="M62 45H108M62 54H98M62 63H88"/>
+    <rect x="239" y="17" width="71" height="58" rx="8"/><circle cx="291" cy="32" r="5"/><path d="M246 65L265 40L279 55L287 46L303 65"/>
+    <rect x="228" y="113" width="90" height="49" rx="8"/>
+    <path d="M243 135V140M251 128V147M259 122V153M267 130V145M275 126V149M283 132V143M291 123V152M299 134V141" stroke-width="3" stroke-linecap="round"/>
+    <path d="M170 95H190M180 85V105" stroke-width="3"/>
+  </g>
+{% when 'detection' %}
+  <g stroke="currentColor" stroke-width="1.5">
+    <path d="M20 80H35L42 56L51 104L60 42L69 115L77 70L84 85H103L111 62L119 93L128 50L136 110L145 76H162"/>
+    <path d="M198 80H212L220 62L228 93L236 71L244 85L252 42L260 120L268 70L276 93L284 54L292 105L300 75H340"/>
+    <path d="M180 19V149" stroke-dasharray="4 5" opacity=".4"/>
+    <path d="M36 135H145M215 135H325" opacity=".3"/>
+    <circle cx="256" cy="80" r="29"/><path d="M278 102L298 122" stroke-width="3"/>
+    <circle cx="94" cy="135" r="4" fill="currentColor"/><circle cx="276" cy="135" r="4" fill="currentColor"/>
+  </g>
+{% endcase %}
+</svg>

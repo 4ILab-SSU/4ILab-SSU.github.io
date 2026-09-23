@@ -86,7 +86,7 @@
 - **키**(`lee2026eyetag`)는 사이트 전체에서 유일해야 합니다. `<1저자성><연도><키워드>` 권장.
 - **저자**는 `성, 이름 and 성, 이름` 형식. 공동 1저자는 성 뒤에 `*`, 교신저자는 `+` 를 붙이고 `annotation` 에 설명.
 - `abbr` 는 연구 분야 배지: `MI` 의료영상, `IP` 영상처리/비전, `ML` 멀티모달, `AP` 오디오/음성, `LP` 언어, `DD` 딥페이크 탐지. (새 분야는 `_data/venues.yml` 에 먼저 추가)
-- 선택 필드: `pdf`, `html`(출판사 페이지), `code`, `arxiv`(번호만), `doi`, `award = {Oral}`, `preview = {파일.png}`(썸네일, `assets/img/publication_preview/`), `selected = {true}`(홈 화면 노출).
+- 선택 필드: `pdf`, `html`(출판사 페이지), `code`, `arxiv`(번호만), `doi`, `award = {Oral}`, `preview = {파일.png}`(썸네일, `assets/img/publication_preview/`), `selected = {true}`(교수 소개 페이지의 대표 논문 목록).
 - 중괄호 `{ }` 짝이 맞는지 꼭 확인 — 가장 흔한 실수입니다. (PR 검사에서 잡아줍니다)
 - `&` 는 `\&` 로 씁니다.
 
@@ -140,17 +140,32 @@ Welcome to 4ILab! **Sunyoung Park** and **Yeojoon Yoon** joined us as undergradu
 ```
 
 - 본문은 한 문단, Markdown 가능(`**굵게**`, `*기울임*`, `[링크](https://...)`).
-- 홈 화면에는 최신 6개가, `/news/` 에는 전체가 날짜순으로 표시됩니다.
+- 홈 화면에는 최신 3개가, `/news/` 에는 전체가 날짜순으로 표시됩니다.
 - 긴 소식(사진 포함 등)은 `inline: false` 로 바꾸고 `title:` 을 추가하면 별도 페이지가 생깁니다.
 
 ---
 
-## 5. 홈 화면 Highlight (`_data/highlight.yml`)
+## 5. 홈 화면 구성
+
+`_data/home.yml`에서 첫 화면 문구와 대표 사진, 연구 질문 카드, 연구실 생활 사진, 참여 안내를 변경합니다.
+
+- `hero`: 첫 화면 제목, 설명, 사진, 캡션
+- `research.areas`: 방문자에게 소개할 연구 질문 3개 (`id`는 연구 페이지 앵커)
+- `people`: 구성원 소개 문구와 사진
+- `moments`: 활동 사진 3장과 앨범 링크
+- `join`: 연구 참여 안내
+
+사진 경로는 `/assets/img/photos/파일명.jpg` 형태로 입력합니다. 연구실 구성원 수와 최신 뉴스는 기존 데이터에서 자동으로 반영됩니다.
+
+홈 화면의 최근 연구는 `_data/highlight.yml`에서 변경합니다. `short_title`은 짧은 제목, `venue`는 학회명, `summary`는 연구를 쉽게 풀어 쓴 한 문장입니다. `url`은 `/publications/#논문키`로 지정하면 해당 논문으로 바로 연결됩니다.
 
 ```yaml
 title: Two papers accepted to BMVC 2026 🎉
 items:
   - title: "Watch Your Speech: ..."
+    short_title: Watch Your Speech
+    venue: BMVC 2026
+    summary: "영상과 텍스트를 함께 활용한 음성 생성 연구"
     authors: Gunwoo Lee*, Yoori Oh*, Yoseob Han
     url: https://...        # 선택
 note: "* equal contribution"

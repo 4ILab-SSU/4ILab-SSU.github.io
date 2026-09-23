@@ -1,0 +1,62 @@
+# Homepage storytelling. Edit these fields to update the landing page.
+hero:
+  eyebrow: AI RESEARCH LAB · SOONGSIL UNIVERSITY
+  headline: "Beyond pixels."
+  headline_accent: "Closer to understanding."
+  description: "더 선명하게 보고, 더 깊이 이해하는 AI. 우리는 의료영상, 멀티모달 학습, 딥페이크 탐지를 연구하는 숭실대학교 4ILab입니다."
+  image: /assets/img/photos/2026-05-15-01.jpg
+  image_alt: "스승의 날, 연구실에서 함께한 4ILab 구성원들"
+  caption: "Ideas grow better together."
+  caption_detail: "A moment at 4ILab · May 2026"
+research:
+  eyebrow: THE QUESTIONS WE EXPLORE
+  title: "우리가 풀고 있는 문제들"
+  description: "영상 속 작은 단서에서, 서로 다른 데이터를 연결하는 새로운 가능성까지."
+  areas:
+    - id: medical-imaging
+      visual: imaging
+      label: MEDICAL IMAGING
+      title: "더 적은 데이터로, 더 선명하게 볼 수 있을까?"
+      description: "CT·MRI 영상의 복원과 분석을 통해 더 정확한 의료영상 AI를 연구합니다."
+      tags: "Reconstruction / Segmentation"
+    - id: multimodal
+      visual: multimodal
+      label: MULTIMODAL AI
+      title: "AI가 보고, 듣고, 읽는 것을 함께 이해한다면?"
+      description: "텍스트·영상·음성을 연결해 정보를 생성하고 검색하는 방법을 탐구합니다."
+      tags: "Generation / Retrieval"
+    - id: deepfake-detection
+      visual: detection
+      label: TRUSTWORTHY MEDIA
+      title: "진짜와 만들어진 것의 차이는 어디에 있을까?"
+      description: "합성된 음성과 영상의 흔적을 찾아 딥페이크를 탐지하는 기술을 개발합니다."
+      tags: "Audio / Video Deepfakes"
+people:
+  eyebrow: THE PEOPLE BEHIND THE IDEAS
+  title: "함께 질문하고,\n함께 성장합니다."
+  description: "각자의 호기심을 함께 나누며 연구합니다. 논문을 발표하는 순간도, 연구실에서 보내는 평범한 하루도 4ILab의 이야기입니다."
+  image: /assets/img/photos/2026-06-23-10.jpg
+  image_alt: "제주 학회 일정 중 식사를 함께하는 연구실 구성원들"
+  image_caption: "Beyond the lab · Jeju, June 2026"
+moments:
+  - image: /assets/img/photos/2026-06-23-02.jpg
+    alt: "대한전자공학회 하계종합학술대회에 참석한 구성원들"
+    title: "연구를 나누는 자리"
+    label: "IEIE · JEJU 2026"
+    url: /photos/#album-2026-06-23
+  - image: /assets/img/photos/2025-12-17-01.jpg
+    alt: "연구실 크리스마스 모임에서 함께 활동하는 구성원들"
+    title: "우리의 평범한 하루"
+    label: "TOGETHER AT 4ILAB"
+    url: /photos/#album-2025-12-17
+  - image: /assets/img/photos/2025-02-21-02.jpg
+    alt: "졸업식 기념사진"
+    title: "새로운 시작을 응원하며"
+    label: "GRADUATION · 2025"
+    url: /photos/#album-2025-02-21
+join:
+  eyebrow: YOUR NEXT CHAPTER
+  title: "다음 질문을, 함께 풀어볼까요?"
+  description: "AI와 영상 연구가 궁금한 학생, 새로운 연결을 찾는 연구자 여러분을 기다립니다."
+  primary_label: "연구 참여 알아보기"
+  secondary_label: "연구 협력 문의"

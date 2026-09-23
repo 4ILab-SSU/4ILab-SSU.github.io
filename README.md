@@ -17,7 +17,8 @@ _data/grants.yml           funded projects                   → /projects
 _data/talks.yml            invited talks                     → /publications#invited-talks
 _data/patents.yml          patents                           → /publications#patents
 _data/courses.yml          teaching                          → /teaching
-_data/highlight.yml        "latest research highlight" box   → home
+_data/home.yml             homepage narrative and photos     → home
+_data/highlight.yml        featured research stories         → home
 _data/venues.yml           research-area badges (MI, IP, …)
 _data/photos.yml           photo albums                      → /photos
 _data/calendar.yml         conference calendar               → /calendar
