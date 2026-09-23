@@ -1,44 +1,84 @@
-# Photos from the original Google Sites. Add image filenames under each album.
+# Filename format: YYYY-MM-DD-NN.jpg (or .png matching the actual image format).
 - date: '2026-06-23'
   title: '대한전자공학회 하계종합학술대회'
   location: '롯데호텔, 제주'
   images:
+    - '2026-06-23-01.jpg'
     - '2026-06-23-02.jpg'
+    - '2026-06-23-03.jpg'
+    - '2026-06-23-04.jpg'
+    - '2026-06-23-05.jpg'
     - '2026-06-23-06.jpg'
     - '2026-06-23-07.jpg'
+    - '2026-06-23-08.jpg'
+    - '2026-06-23-09.jpg'
+    - '2026-06-23-10.jpg'
 - date: '2026-05-15'
   title: '스승의 날'
   location: ''
-  images: []
+  images:
+    - '2026-05-15-01.jpg'
+    - '2026-05-15-02.jpg'
 - date: '2026-01-18'
   title: 'International Conference on Electronics, Information, and Communication (ICEIC)'
   location: 'MGM COTAI, Macau'
-  images: []
+  images:
+    - '2026-01-18-01.jpg'
+    - '2026-01-18-02.jpg'
+    - '2026-01-18-03.jpg'
+    - '2026-01-18-04.jpg'
+    - '2026-01-18-05.jpg'
+    - '2026-01-18-06.jpg'
+    - '2026-01-18-07.jpg'
+    - '2026-01-18-08.jpg'
+    - '2026-01-18-09.jpg'
 - date: '2025-12-17'
   title: '미리 메리 크리스마스'
   location: ''
-  images: []
+  images:
+    - '2025-12-17-01.jpg'
+    - '2025-12-17-02.jpg'
+    - '2025-12-17-03.jpg'
+    - '2025-12-17-04.jpg'
+    - '2025-12-17-05.jpg'
+    - '2025-12-17-06.jpg'
+    - '2025-12-17-07.jpg'
 - date: '2025-12-04'
   title: '교수님 생일'
   location: ''
-  images: []
+  images:
+    - '2025-12-04-01.jpg'
+    - '2025-12-04-02.jpg'
+    - '2025-12-04-03.jpg'
 - date: '2025-09-23'
   title: 'MICCAI 2025'
   location: 'Daejeon, Korea'
-  images: []
+  images:
+    - '2025-09-23-01.jpg'
+    - '2025-09-23-02.jpg'
+    - '2025-09-23-03.jpg'
 - date: '2025-06-18'
   title: '한국통신학회 하계종합학술발표회'
   location: '신화월드, 제주'
-  images: []
+  images:
+    - '2025-06-18-01.jpg'
 - date: '2025-05-15'
   title: '스승의 날'
   location: ''
-  images: []
+  images:
+    - '2025-05-15-01.jpg'
+    - '2025-05-15-02.jpg'
 - date: '2025-02-21'
   title: '졸업식'
   location: '김민규, 이건우, 이정민, 정민교, 정세연, 한수호'
-  images: []
+  images:
+    - '2025-02-21-01.jpg'
+    - '2025-02-21-02.jpg'
+    - '2025-02-21-03.jpg'
+    - '2025-02-21-04.png'
+    - '2025-02-21-05.jpg'
 - date: '2023-02-27'
   title: '신임교원 발령장 수여식'
   location: ''
-  images: []
+  images:
+    - '2023-02-27-01.png'

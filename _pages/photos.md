@@ -8,7 +8,7 @@ nav_order: 6.5
 ---
 
 {% assign albums = site.data.photos | sort: 'date' | reverse %}
-<p>일부 사진은 기존 Google Sites에서만 열람할 수 있습니다. <a href="https://sites.google.com/ssu.ac.kr/4ilab/photos">전체 원본 앨범 보기 ↗</a></p>
+
 {% for album in albums %}
 {% if album.images.size > 0 %}
 <section class="photo-album" id="album-{{ album.date }}">
@@ -25,15 +25,3 @@ nav_order: 6.5
 </section>
 {% endif %}
 {% endfor %}
-
-<h2>More from the archive</h2>
-<ul class="prof-timeline">
-{% for album in albums %}
-  {% if album.images.size == 0 %}
-  <li>
-    <div class="tl-title"><a href="https://sites.google.com/ssu.ac.kr/4ilab/photos">{{ album.title | escape }} ↗</a></div>
-    <div class="tl-meta"><time datetime="{{ album.date }}">{{ album.date }}</time>{% if album.location != '' %} · {{ album.location | escape }}{% endif %}</div>
-  </li>
-  {% endif %}
-{% endfor %}
-</ul>
