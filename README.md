@@ -30,6 +30,10 @@ scripts/validate.js        content checks run in CI
 
 ## Local preview
 
+Use Ruby 3.3 and Node.js 22 or later. On macOS, install Ruby with
+`brew install ruby@3.3 imagemagick` and run `export PATH="/opt/homebrew/opt/ruby@3.3/bin:$PATH"`
+on Apple Silicon before the commands below.
+
 ```bash
 npm ci
 npm run lint
