@@ -1,6 +1,10 @@
 # Homepage storytelling. Edit these fields to update the landing page.
 hero:
-  eyebrow: AI RESEARCH LAB · SOONGSIL UNIVERSITY
+  name: 4ILab
+  full_name: Integrated Information & Intelligence Imaging Lab
+  name_ko: 통합 정보 & 지능형 영상 연구실
+  affiliation: SOONGSIL UNIVERSITY
+  location: SEOUL, SOUTH KOREA
   headline: "Beyond pixels."
   headline_accent: "Closer to understanding."
   description: "더 선명하게 보고, 더 깊이 이해하는 AI. 우리는 의료영상, 멀티모달 학습, 딥페이크 탐지를 연구하는 숭실대학교 4ILab입니다."

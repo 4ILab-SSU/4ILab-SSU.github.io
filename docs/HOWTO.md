@@ -149,7 +149,7 @@ Welcome to 4ILab! **Sunyoung Park** and **Yeojoon Yoon** joined us as undergradu
 
 `_data/home.yml`에서 첫 화면 문구와 대표 사진, 연구 질문 카드, 연구실 생활 사진, 참여 안내를 변경합니다.
 
-- `hero`: 첫 화면 제목, 설명, 사진, 캡션
+- `hero`: 연구실 이름(`name`), 정식 영문명(`full_name`), 국문명(`name_ko`), 소속(`affiliation`), 위치(`location`), 보조 슬로건(`headline`, `headline_accent`), 설명, 사진, 캡션
 - `research.areas`: 방문자에게 소개할 연구 질문 3개 (`id`는 연구 페이지 앵커)
 - `people`: 구성원 소개 문구와 사진
 - `moments`: 활동 사진 3장과 앨범 링크

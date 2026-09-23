@@ -79,12 +79,15 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--global-theme-co
 }
 .home-hero { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; padding: 24px 0 48px; }
 .hero-copy {
-  .section-label { display: flex; align-items: center; gap: 10px; font-size: 9px; letter-spacing: 1.4px; }
-  h1 { font-size: clamp(3rem, 4.9vw, 4.6rem); line-height: 1.06; letter-spacing: -3px; margin: 26px 0; font-weight: 600; }
-  h1 > span { color: var(--global-theme-color); }
-  .hero-description { max-width: 440px; font-size: 15px; line-height: 1.95; color: var(--global-text-color-light); word-break: keep-all; }
+  h1 { font-size: clamp(4.5rem, 7.5vw, 6.5rem); line-height: 1; letter-spacing: -.055em; margin: 0 0 20px; font-weight: 700; }
+  .hero-full-name { max-width: 510px; font-size: clamp(1.35rem, 2.1vw, 1.8rem); font-weight: 500; line-height: 1.35; letter-spacing: -.025em; margin: 0 0 10px; text-wrap: balance; }
+  .hero-korean-name { font-size: 16px; line-height: 1.6; margin: 0 0 18px; word-break: keep-all; color: var(--global-text-color-light); }
+  .hero-affiliation { display: flex; flex-wrap: wrap; gap: 5px 16px; font-size: 10px; font-weight: 600; letter-spacing: 1px; line-height: 1.8; margin: 0 0 28px; }
+  .hero-affiliation span { color: var(--global-theme-color); }
+  .hero-tagline { font-size: 18px; font-weight: 500; line-height: 1.5; margin: 0 0 12px; }
+  .hero-tagline span { color: var(--global-theme-color); }
+  .hero-description { max-width: 470px; font-size: 14px; line-height: 1.85; color: var(--global-text-color-light); word-break: keep-all; }
 }
-.status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--global-theme-color); flex-shrink: 0; }
 .home-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 24px; margin-top: 30px; }
 .home-button { background: #173c3e; color: #fff !important; display: inline-flex; gap: 24px; align-items: center; justify-content: space-between; padding: 15px 20px; font-size: 13px; font-weight: 500; border: 1px solid #173c3e; border-radius: 4px; transition: background .2s; }
 .home-button:hover { background: #006b62; }
@@ -94,11 +97,6 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--global-theme-co
 .hero-photo figcaption strong { font-size: 16px; font-weight: 500; }
 .hero-photo figcaption span { font-size: 10px; color: #c4d8d0; letter-spacing: .5px; }
 .photo-corner { position: absolute; top: 0; right: 19px; padding: 10px 14px; background: #caec91; color: #173c3e; font-family: monospace; font-size: 11px; transform: rotate(3deg); }
-.lab-identity { padding: 22px 0; border-top: 1px solid var(--global-divider-color); border-bottom: 1px solid var(--global-divider-color); display: flex; align-items: center; gap: 25px; }
-.lab-identity > span:first-child { font-size: 29px; font-weight: 700; letter-spacing: -1px; }
-.lab-identity p { font-size: 12px; line-height: 1.7; margin: 0; }
-.lab-identity p span { color: var(--global-text-color-light); font-size: 11px; }
-.lab-identity .identity-location { margin-left: auto; font-size: 9px; line-height: 1.8; letter-spacing: 1.2px; text-align: right; color: var(--global-text-color-light); }
 .home-section { margin: 85px 0; }
 .section-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 25px; margin-bottom: 32px; }
 .section-heading > div > p:last-child:not(.section-label) { color: var(--global-text-color-light); font-size: 14px; margin: 0; word-break: keep-all; }
@@ -168,7 +166,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--global-theme-co
 .footer-bottom > div { display: flex; gap: 20px; flex-wrap: wrap; }
 @media (max-width: 900px) {
   .home-hero { gap: 28px; }
-  .hero-copy h1 { font-size: 3.1rem; letter-spacing: -2px; }
+  .hero-copy h1 { font-size: 4.8rem; }
   .hero-photo > img { aspect-ratio: .95; }
   .home-actions { gap: 18px; }
   .research-stories { gap: 14px; }
@@ -184,15 +182,14 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--global-theme-co
   body > .container[role="main"] { padding-top: 15px; }
   #navbar { padding: 12px 0; }
   .home-hero { grid-template-columns: 1fr; gap: 28px; padding: 24px 0 30px; }
-  .hero-copy h1 { font-size: clamp(2.9rem, 11vw, 4rem); margin: 22px 0; line-height: 1.08; }
+  .hero-copy h1 { font-size: clamp(4rem, 18vw, 5rem); margin: 0 0 16px; }
+  .hero-copy .hero-full-name { font-size: 1.4rem; }
+  .hero-copy .hero-korean-name { font-size: 14px; }
+  .hero-copy .hero-affiliation { font-size: 9px; gap: 2px 12px; margin-bottom: 22px; }
+  .hero-copy .hero-tagline { font-size: 16px; }
   .hero-copy .hero-description { font-size: 14px; }
-  .hero-copy .section-label { font-size: 8px; letter-spacing: .8px; }
   .hero-photo > img { aspect-ratio: 1.35; }
   .hero-photo figcaption { padding: 16px 20px; }
-  .lab-identity { gap: 18px; padding: 20px 0; }
-  .lab-identity > span:first-child { font-size: 23px; }
-  .lab-identity p { font-size: 10px; }
-  .lab-identity .identity-location { display: none; }
   .home-section { margin: 55px 0; }
   .section-heading { display: block; margin-bottom: 24px; }
   .section-heading > .text-link { margin-top: 12px; }

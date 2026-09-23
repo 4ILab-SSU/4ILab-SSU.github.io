@@ -9,8 +9,11 @@ description: "We explore AI for medical imaging, multimodal understanding, and t
 <div class="lab-home">
   <section class="home-hero" aria-labelledby="home-heading">
     <div class="hero-copy">
-      <p class="section-label"><span class="status-dot"></span>{{ home.hero.eyebrow }}</p>
-      <h1 id="home-heading">{{ home.hero.headline }}<br><span>{{ home.hero.headline_accent }}</span></h1>
+      <h1 id="home-heading">{{ home.hero.name }}</h1>
+      <p class="hero-full-name">{{ home.hero.full_name | escape }}</p>
+      <p class="hero-korean-name" lang="ko">{{ home.hero.name_ko | escape }}</p>
+      <p class="hero-affiliation"><span>{{ home.hero.affiliation }}</span><span>{{ home.hero.location }}</span></p>
+      <p class="hero-tagline">{{ home.hero.headline }} <span>{{ home.hero.headline_accent }}</span></p>
       <p class="hero-description" lang="ko">{{ home.hero.description }}</p>
       <div class="home-actions">
         <a class="home-button" href="{{ '/research/' | relative_url }}">Explore our research <span aria-hidden="true">↗</span></a>
@@ -23,7 +26,6 @@ description: "We explore AI for medical imaging, multimodal understanding, and t
       <span class="photo-corner" aria-hidden="true">4I / together</span>
     </figure>
   </section>
-  <div class="lab-identity"><span>4ILab</span><p>Integrated Information &amp; Intelligence Imaging Lab<br><span lang="ko">통합 정보 &amp; 지능형 영상 연구실</span></p><span class="identity-location">SOONGSIL UNIVERSITY<br>SEOUL, SOUTH KOREA</span></div>
 
   <section class="home-section" aria-labelledby="research-heading">
     <div class="section-heading"><div><p class="section-label">01 / {{ home.research.eyebrow }}</p><h2 id="research-heading" lang="ko">{{ home.research.title }}</h2><p lang="ko">{{ home.research.description }}</p></div><a class="text-link" href="{{ '/research/' | relative_url }}">All research <span aria-hidden="true">↗</span></a></div>
