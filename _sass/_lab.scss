@@ -28,7 +28,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--global-theme-co
   padding: 16px 0;
   opacity: 1;
   background: var(--global-bg-color);
-  .container { display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: nowrap; }
+  .container { display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: nowrap; width: 100%; max-width: none; padding-inline: 24px; }
   .lab-brand { display: flex; gap: 11px; align-items: center; padding: 0; margin: 0; }
   .brand-symbol { width: 42px; height: 42px; display: grid; place-items: center; position: relative; background: #173c3e; color: #fff; font-size: 25px; font-weight: 700; letter-spacing: -2px; border-radius: 4px; }
   .brand-symbol > span { width: 7px; height: 7px; background: #caec91; position: absolute; right: 4px; bottom: 4px; }
@@ -40,7 +40,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--global-theme-co
   .dropdown-item { text-transform: capitalize; font-size: 14px; }
 }
 @media (min-width: 1200px) {
-  #navbar .navbar-collapse-main { display: flex !important; flex-basis: auto; }
+  #navbar .navbar-collapse-main { display: flex !important; flex-basis: auto; margin-left: auto; }
   #navbar .navbar-toggler-main { display: none; }
   #navbar .navbar-menu-list { flex-direction: row; }
 }
@@ -271,14 +271,19 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--global-theme-co
 #navbar .language-switch a[aria-current] { color: var(--global-theme-color); font-weight: 800; text-decoration: underline; text-underline-offset: 5px; }
 #navbar .lab-brand { order: 1; }
 #navbar .navbar-collapse-main { order: 2; }
-#navbar .navbar-toggler-main { order: 4; }
-@media (max-width: 1199px) {
-  #navbar .header-controls { order: 2; margin-left: auto; }
-  #navbar .navbar-toggler-main { order: 3; margin-left: 0; }
-  #navbar .navbar-collapse-main { order: 4; }
-}
-
+#navbar .navbar-toggler-main { order: 2; }
 #navbar .header-controls { display: flex; align-items: center; gap: 10px; order: 3; flex-shrink: 0; }
 #navbar .header-controls #light-toggle { transform: none; }
-@media (max-width: 1199px) { #navbar .header-controls { order: 2; } }
-@media (max-width: 575px) { #navbar .container { gap: 8px; } }
+@media (max-width: 1199px) {
+  #navbar .navbar-toggler-main { margin-left: auto; }
+  #navbar .navbar-collapse-main { order: 4; }
+}
+@media (max-width: 575px) {
+  #navbar .container { gap: 8px; padding-inline: 12px; }
+}
+@media (max-width: 380px) {
+  #navbar .brand-name small { display: none; }
+  #navbar .brand-name { font-size: 20px; }
+  #navbar .brand-symbol { width: 34px; height: 34px; font-size: 22px; }
+  #navbar .lab-brand { gap: 7px; }
+}

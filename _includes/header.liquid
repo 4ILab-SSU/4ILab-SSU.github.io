@@ -6,19 +6,6 @@
         <span class="brand-symbol" aria-hidden="true">4I<span></span></span>
         <span class="brand-name">4ILab<small>SOONGSIL UNIVERSITY</small></span>
       </a>
-      {% assign language_path = page.language_path | default: '/' %}
-      <div class="header-controls">
-      <div class="language-switch" aria-label="Language">
-        <a href="{{ language_path | relative_url }}" lang="en" hreflang="en" data-preserve-language="true" data-language-switch="en"{% unless page.lang == 'ko' %} aria-current="true"{% endunless %}>EN</a><span aria-hidden="true">|</span><a href="{{ language_path | prepend: '/ko' | relative_url }}" lang="ko" hreflang="ko" data-preserve-language="true" data-language-switch="ko"{% if page.lang == 'ko' %} aria-current="true"{% endif %}>KO</a>
-      </div>
-      {% if site.enable_darkmode %}
-        <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme">
-          <i class="fa-half-sun-moon" id="light-toggle-system"></i>
-          <i class="fa-solid fa-moon" id="light-toggle-dark"></i>
-          <i class="fa-solid fa-sun" id="light-toggle-light"></i>
-        </button>
-      {% endif %}
-      </div>
       <!-- Navbar Toggle -->
       <button
         class="navbar-toggler collapsed navbar-toggler-main"
@@ -110,6 +97,19 @@
           {% endif %}
 
         </ul>
+      </div>
+      {% assign language_path = page.language_path | default: '/' %}
+      <div class="header-controls">
+      <div class="language-switch" aria-label="Language">
+        <a href="{{ language_path | relative_url }}" lang="en" hreflang="en" data-preserve-language="true" data-language-switch="en"{% unless page.lang == 'ko' %} aria-current="true"{% endunless %}>EN</a><span aria-hidden="true">|</span><a href="{{ language_path | prepend: '/ko' | relative_url }}" lang="ko" hreflang="ko" data-preserve-language="true" data-language-switch="ko"{% if page.lang == 'ko' %} aria-current="true"{% endif %}>KO</a>
+      </div>
+      {% if site.enable_darkmode %}
+        <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme">
+          <i class="fa-half-sun-moon" id="light-toggle-system"></i>
+          <i class="fa-solid fa-moon" id="light-toggle-dark"></i>
+          <i class="fa-solid fa-sun" id="light-toggle-light"></i>
+        </button>
+      {% endif %}
       </div>
     </div>
   </nav>
