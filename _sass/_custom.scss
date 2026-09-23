@@ -520,15 +520,15 @@
   button { padding: 10px 14px; border: 1px solid var(--global-divider-color); border-radius: 8px; background: var(--global-bg-color); color: var(--global-text-color); min-height: 44px; font-size: .85rem; }
   .atlas-note { color: var(--global-text-color-light); font-size: .82rem; }
   #photo-map { height: 440px; border-radius: 16px; border: 1px solid var(--global-divider-color); margin: 22px 0 12px; z-index: 0; background: #e3ece8; }
-  .photo-place-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); align-items: start; gap: 10px; margin: 18px 0 32px; }
-  .photo-place-card { border: 1px solid var(--global-divider-color); border-radius: 10px; min-width: 0; }
-  .photo-place-card summary { position: relative; padding: 14px 34px 14px 16px; cursor: pointer; list-style: none; }
+  .photo-place-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); align-items: start; gap: 10px; margin: 18px 0 32px; }
+  .photo-place-card { position: relative; border: 1px solid var(--global-divider-color); border-radius: 10px; min-width: 0; }
+  .photo-place-card summary { position: relative; padding: 16px 120px 16px 30px; cursor: pointer; list-style: none; }
   .photo-place-card summary::-webkit-details-marker { display: none; }
-  .photo-place-card summary::after { content: "+"; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: var(--global-theme-color); }
-  .photo-place-card[open] summary::after { content: "−"; }
+  .photo-place-card summary::after { content: "+"; position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--global-theme-color); }
+  .photo-place-card details[open] summary::after { content: "−"; }
   .photo-place-card summary:focus-visible { outline: 2px solid var(--global-theme-color); outline-offset: 3px; border-radius: 10px; }
   .photo-place-name { display: block; font-size: .9rem; font-weight: 600; }
-  .photo-place-count { display: block; margin-top: 4px; color: var(--global-text-color-light); font-size: .75rem; }
+  .photo-place-map-button { position: absolute; top: 5px; right: 6px; padding: 8px; font-size: .75rem; border: 0; }
   .photo-place-content { padding: 0 16px 14px; }
   .photo-place-card ul { padding-left: 16px; margin: 12px 0 0; font-size: .8rem; overflow-wrap: anywhere; }
   .photo-place-card li { margin: 8px 0; }
