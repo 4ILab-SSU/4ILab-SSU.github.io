@@ -1,7 +1,7 @@
 ---
 ---
 <div class="row">
-  {% if site.enable_publication_thumbnails %}
+  {% if entry.abbr or site.enable_publication_thumbnails %}
     <div class="col col-sm-2 abbr">
       {% if entry.abbr %}
         {% assign area = site.data.venues[entry.abbr] %}

@@ -17,10 +17,8 @@ nav_order: 3
 </p>
 
 <div class="publication-areas" aria-label="Research areas">
-  {% for v in site.data.venues %}<a href="{{ v[1].url | relative_url }}" class="publication-area-key"><strong>{{ v[0] }}</strong><span>{{ v[1].name }}</span></a>{% endfor %}
+  {% for v in site.data.venues %}<a href="{{ v[1].url | relative_url }}" class="publication-area-key" style="--area-color: {{ v[1].color }}"><strong>{{ v[0] }}</strong><span>{{ v[1].name }}</span></a>{% endfor %}
 </div>
-
-{% include bib_search.liquid %}
 
 <h2 id="conferences">Conferences &amp; Workshops</h2>
 
