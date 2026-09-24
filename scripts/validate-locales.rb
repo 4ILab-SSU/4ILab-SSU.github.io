@@ -4,16 +4,19 @@ require 'nokogiri'
 require 'json'
 require 'uri'
 require 'yaml'
+require 'bibtex'
 root = File.expand_path('..', __dir__)
 site = File.join(root, '_site')
 check = ->(condition, message) { abort("Localization check failed: #{message}") unless condition }
 files = Dir.glob(File.join(site, '**/*.html'))
 checked = 0
+expected_routes = nil
 files.each do |file|
   doc = Nokogiri::HTML(File.read(file))
   payload = doc.at_css('#site-language-data')
   next unless payload
   data = JSON.parse(payload.content)
+  expected_routes ||= data.fetch('routes')
   lang = data.fetch('lang')
   check.call(doc.at_css('html')['lang'] == lang, "HTML language: #{file}")
   check.call(doc.css('[data-language-switch]').length == 2, "Language switch: #{file}")
@@ -31,12 +34,22 @@ files.each do |file|
       check.call(path.start_with?('/ko/'), "Navigation leaves Korean edition: #{href} in #{file}")
     end
   end
+  if lang == 'ko'
+    search = doc.css('script:not([src])').find { |node| node.content.include?('ninja.data =') }
+    check.call(search, "Missing search data: #{file}")
+    search.content.scan(/window\.location\.href\s*=\s*("(?:\\.|[^"\\])*")/).each do |match|
+      url = JSON.parse(match.first)
+      path = url.split(/[?#]/).first
+      check.call(!data['routes'].include?(path), "Search leaves Korean edition: #{url} in #{file}")
+    end
+  end
   checked += 1
 end
+expected_papers = BibTeX.open(File.join(root, '_bibliography/papers.bib')).entries.values.count { |entry| %w[article inproceedings].include?(entry.type.to_s.downcase) }
 %w[en ko].each do |lang|
   dir = lang == 'en' ? site : File.join(site, 'ko')
   papers = Nokogiri::HTML(File.read(File.join(dir, 'publications/index.html')))
-  check.call(papers.css('.research-area-badge').length == 38, "Missing papers in #{lang}")
+  check.call(papers.css('.research-area-badge').length == expected_papers, "Missing papers in #{lang}")
   check.call(papers.css('input[placeholder="Type to filter"]').empty?, "Filter returned in #{lang}")
   teaching = Nokogiri::HTML(File.read(File.join(dir, 'teaching/index.html')))
   terms = teaching.css('.course-term')
@@ -49,5 +62,5 @@ end
   news = Nokogiri::HTML(File.read(File.join(dir, 'news/index.html')))
   check.call(news.css('.news tr').length == Dir.glob(File.join(root, '_news/*.md')).length, "Missing news in #{lang}")
 end
-check.call(checked >= 26, 'Missing bilingual main pages')
+check.call(expected_routes && checked == expected_routes.length * 2, 'Missing bilingual pages')
 puts "Localization OK: #{checked} pages; routes, language metadata, publications, courses and news verified."

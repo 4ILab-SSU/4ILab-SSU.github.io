@@ -55,5 +55,5 @@ nav_order: 6.6
     </div>
   </section>
 </div>
-<script type="application/json" id="conference-data">{{ site.data.conferences | jsonify }}</script>
-<script src="{{ '/assets/js/conference-calendar.js' | relative_url }}" defer></script>
+<script type="application/json" id="conference-data">{{ site.data.conferences | jsonify | replace: '<', '\u003c' }}</script>
+<script src="{{ '/assets/js/conference-calendar.js' | relative_url | bust_file_cache }}" defer></script>

@@ -10,7 +10,7 @@
   label { margin: 0; font-size: .85rem; }
   .calendar-scroll { overflow-x: auto; border: 1px solid var(--global-divider-color); border-radius: 12px; }
   .conference-month-table { width: 100%; min-width: 740px; table-layout: fixed; border-collapse: collapse; font-size: .75rem; }
-  th { padding: 12px; text-align: center; background: var(--global-code-bg-color); }
+  th { padding: 12px; text-align: center; background: var(--lab-surface); color: var(--global-text-color); }
   td { height: 108px; vertical-align: top; padding: 8px; border: 1px solid var(--global-divider-color); }
   .calendar-day-number { display: block; margin-bottom: 7px; }
   .calendar-current-day { background: var(--lab-surface); box-shadow: inset 0 0 0 2px var(--global-theme-color); }

@@ -30,8 +30,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--global-theme-co
   background: var(--global-bg-color);
   .container { display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: nowrap; width: 100%; max-width: none; padding-inline: 24px; }
   .lab-brand { display: flex; gap: 11px; align-items: center; padding: 0; margin: 0; }
-  .brand-symbol { width: 42px; height: 42px; display: grid; place-items: center; position: relative; background: #10385f; color: #fff; font-size: 25px; font-weight: 700; letter-spacing: -2px; border-radius: 4px; }
-  .brand-symbol > span { width: 7px; height: 7px; background: #c2d4ff; position: absolute; right: 4px; bottom: 4px; }
+  .brand-symbol { width: 52px; height: 36px; display: grid; place-items: center; color: var(--brand-mark-color); }
   .brand-name { display: flex; flex-direction: column; font-size: 24px; font-weight: 700; line-height: 1.05; letter-spacing: -1px; }
   .brand-name small { font-size: 8px; font-weight: 500; letter-spacing: 1.5px; margin-top: 6px; }
   .navbar-nav { gap: 5px; align-items: center; }
@@ -54,7 +53,6 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--global-theme-co
   #navbar .nav-link { padding: 12px; }
   #navbar .nav-join { margin: 5px 0; }
   #navbar .dropdown-menu { position: static; width: 100%; box-shadow: none; }
-  #navbar .toggle-container { align-self: flex-start; }
 }
 // A shared editorial heading gives the inner pages the same lab identity.
 .post > .post-header { border-bottom: 1px solid var(--global-divider-color); padding: 25px 0 30px; margin-bottom: 38px; }
@@ -284,19 +282,17 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--global-theme-co
 @media (max-width: 380px) {
   #navbar .brand-name small { display: none; }
   #navbar .brand-name { font-size: 20px; }
-  #navbar .brand-symbol { width: 34px; height: 34px; font-size: 22px; }
+  #navbar .brand-symbol { width: 34px; height: 28px; }
   #navbar .lab-brand { gap: 7px; }
 }
 
 // 4ILab signature: navy identity, blue interaction, monochrome mark.
 :root { --brand-navy: #10385f; --brand-blue: #3563e9; --brand-mark-color: #10385f; }
 html[data-theme="dark"] { --brand-mark-color: #fff; }
-#navbar .brand-symbol { background: none; color: var(--brand-mark-color); width: 52px; height: 36px; border-radius: 0; }
 .brand-symbol svg { display: block; width: 100%; height: 100%; }
 .footer-brand { flex-wrap: wrap; }
 .footer-brand svg { width: 64px; height: 36px; flex-shrink: 0; }
 .footer-brand > span { flex-basis: 100%; }
-@media (max-width: 380px) { #navbar .brand-symbol { width: 34px; height: 28px; } }
 
 // Public brand reference: real color swatches and original downloadable artwork.
 .brand-page h2 { font-size: clamp(1.5rem, 3vw, 2rem); letter-spacing: -.5px; }

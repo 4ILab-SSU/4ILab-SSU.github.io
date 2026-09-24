@@ -7,10 +7,10 @@ nav: false
 nav_order: 6.5
 ---
 
-{% assign albums = site.data.photos | sort: 'date' | reverse %}
+{% assign albums = site.data.photos | where_exp: 'album', 'album.images.size > 0' | sort: 'date' | reverse %}
 
-<link rel="stylesheet" href="{{ '/assets/leaflet/leaflet.css' | relative_url }}">
-<link rel="stylesheet" href="{{ '/assets/leaflet/MarkerCluster.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/leaflet/leaflet.css' | relative_url | bust_file_cache }}">
+<link rel="stylesheet" href="{{ '/assets/leaflet/MarkerCluster.css' | relative_url | bust_file_cache }}">
 <section class="photo-atlas" id="photo-atlas" aria-labelledby="photo-atlas-title">
   <div class="photo-atlas-heading"><div><span class="atlas-eyebrow">OUR LAB, ON THE MAP</span><h2 id="photo-atlas-title">Places we share.</h2></div><button type="button" id="photo-map-reset" hidden>전체 장소 보기</button></div>
   <p>캠퍼스의 일상에서 학회의 새로운 만남까지. 지도에서 장소를 선택해 연구실의 순간들을 만나보세요.</p>
@@ -21,6 +21,7 @@ nav_order: 6.5
   {% for entry in site.data.photo_places %}
     {% assign place_id = entry[0] %}{% assign place = entry[1] %}
     {% assign place_albums = albums | where: 'place', place_id %}
+    {% if place_albums.size > 0 %}
     <article class="photo-place-card" id="place-{{ place_id }}">
       <details>
         <summary><span class="photo-place-name">{{ place.name }}</span></summary>
@@ -30,6 +31,7 @@ nav_order: 6.5
       </details>
       <button class="photo-place-map-button" type="button" data-photo-place="{{ place_id }}" aria-label="{{ place.name }} 지도에서 보기" hidden>지도에서 보기 ↗</button>
     </article>
+    {% endif %}
   {% endfor %}
   </div>
 </section>
@@ -53,7 +55,7 @@ nav_order: 6.5
 {% endif %}
 {% endfor %}
 
-<script type="application/json" id="photo-map-data">{"places": {{ site.data.photo_places | jsonify }}, "albums": {{ albums | jsonify }}, "imageBase": {{ '/assets/img/photos/' | relative_url | jsonify }}}</script>
-<script src="{{ '/assets/leaflet/leaflet.js' | relative_url }}" defer></script>
-<script src="{{ '/assets/leaflet/leaflet.markercluster.js' | relative_url }}" defer></script>
-<script src="{{ '/assets/js/photo-map.js' | relative_url }}" defer></script>
+<script type="application/json" id="photo-map-data">{"places": {{ site.data.photo_places | jsonify | replace: '<', '\u003c' }}, "albums": {{ albums | jsonify | replace: '<', '\u003c' }}, "imageBase": {{ '/assets/img/photos/' | relative_url | jsonify | replace: '<', '\u003c' }}}</script>
+<script src="{{ '/assets/leaflet/leaflet.js' | relative_url | bust_file_cache }}" defer></script>
+<script src="{{ '/assets/leaflet/leaflet.markercluster.js' | relative_url | bust_file_cache }}" defer></script>
+<script src="{{ '/assets/js/photo-map.js' | relative_url | bust_file_cache }}" defer></script>

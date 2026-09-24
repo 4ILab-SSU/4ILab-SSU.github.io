@@ -257,6 +257,25 @@ Ruby 를 직접 쓸 경우: `bundle install && bundle exec jekyll serve`.
 - `npm run lint`로 데이터 문법을 검증합니다. 빌드 후 `bundle exec ruby scripts/validate-locales.rb`로 언어별 링크와 콘텐츠 수를 검사합니다. GitHub Actions에서도 자동 실행됩니다.
 
 
-## ブランド와 로고
+## 브랜드와 로고
 
 대표 색상·시그니처 문구·로고 사용법은 [브랜드 가이드](BRAND.md)를 참고하세요.
+
+## 배포 전 점검
+
+```sh
+npm ci
+npm run lint
+bundle exec ruby scripts/test-build-tools.rb
+JEKYLL_ENV=production bundle exec jekyll build
+bundle exec ruby scripts/validate-locales.rb
+npx --no-install purgecss -c purgecss.config.js
+bundle exec ruby scripts/finalize-assets.rb
+bundle exec ruby scripts/validate-site.rb
+```
+
+CSS 최적화 후 `finalize-assets.rb`가 **실제로 배포할 CSS·JS 내용**으로 파일 버전을
+갱신합니다. 마지막 검사는 내부 파일 누락, 중복 ID, JSON 오류, 오래된 파일 버전을
+확인합니다. GitHub Actions에서도 같은 순서로 실행합니다.
+논문 수 검사는 현재 BibTeX 데이터에서 계산하므로 새 논문을 추가할 때 검사 코드를 바꿀 필요가 없습니다.
+사진이 없는 앨범은 공개 목록과 지도에서 제외되며, 사진을 추가하면 표시됩니다.

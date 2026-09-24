@@ -1,11 +1,14 @@
 (() => {
   'use strict';
   const target = document.getElementById('photo-map');
-  if (!target || !window.L) return;
+  if (!target || !window.L || !L.markerClusterGroup) return;
   const { places, albums, imageBase } = JSON.parse(document.getElementById('photo-map-data').textContent);
   const t = window.labTranslate || (text => text);
   const status = document.getElementById('photo-map-status');
+  const locatedAlbums = albums.filter(album => album.images?.length && places[album.place]);
+  if (!locatedAlbums.length) return;
   target.hidden = false;
+  target.tabIndex = -1;
   const map = L.map(target, { scrollWheelZoom: false });
   const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
@@ -24,7 +27,7 @@
   const points = [];
   const node = (tag, text) => { const el = document.createElement(tag); if (text) el.textContent = text; return el; };
   Object.entries(places).forEach(([id, place]) => {
-    const matching = albums.filter(album => album.place === id);
+    const matching = locatedAlbums.filter(album => album.place === id);
     if (!matching.length) return;
     const point = [place.lat, place.lng];
     points.push(point);
@@ -46,6 +49,7 @@
   document.getElementById('photo-map-reset').hidden = false;
   document.getElementById('photo-map-reset').addEventListener('click', () => { map.closePopup(); fit(); status.textContent = t('전체 장소 · 핀의 숫자는 연결된 앨범 수입니다.'); });
   document.querySelectorAll('[data-photo-place]').forEach(control => {
+    if (!markers[control.dataset.photoPlace]) return;
     control.hidden = false;
     control.addEventListener('click', event => {
       const id = control.dataset.photoPlace;
@@ -53,7 +57,7 @@
       event.preventDefault();
       document.getElementById('photo-atlas').scrollIntoView({ behavior: 'auto', block: 'start' });
       map.setView(markers[id].getLatLng(), places[id].zoom || 14, { animate: false });
-      markers[id].openPopup();
+      group.zoomToShowLayer(markers[id], () => markers[id].openPopup());
       target.focus({ preventScroll: true });
       status.textContent = `${places[id].name} ${t('선택됨 · 지도 팝업 또는 아래 목록에서 앨범을 열 수 있습니다.')}`;
     });

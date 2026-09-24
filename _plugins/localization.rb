@@ -1,5 +1,6 @@
 # Two static language editions from one set of pages and shared research data.
 require 'nokogiri'
+require 'cgi'
 module LabLocalization
   JS_MESSAGES = [
     '오늘',
@@ -85,6 +86,22 @@ module LabLocalization
       href = link['href']
       path, suffix = href.split(/(?=[?#])/, 2)
       link['href'] = '/ko' + path + suffix.to_s if lang == 'ko' && routes.include?(path)
+    end
+    # Search uses JS navigation handlers, not links; localize the generated data too.
+    html.css('script:not([src])').each do |script|
+      next unless script.content.include?('ninja.data =')
+      source = script.content.gsub(/window\.location\.href\s*=\s*("(?:\\.|[^"\\])*")/) do
+        url = JSON.parse(Regexp.last_match(1))
+        path, suffix = url.split(/(?=[?#])/, 2)
+        url = '/ko' + path + suffix.to_s if lang == 'ko' && routes.include?(path)
+        "window.location.href = #{JSON.generate(url)}"
+      end
+      source = source.gsub(/(title|description|section):\s*("(?:\\.|[^"\\])*")/) do
+        key, literal = Regexp.last_match(1), Regexp.last_match(2)
+        value = CGI.unescapeHTML(JSON.parse(literal))
+        "#{key}: #{JSON.generate(translate(value, dictionary)).gsub('<', '\\u003c')}"
+      end
+      script.content = source
     end
     # Translate structured data consumed by the interactive calendar and photo map.
     html.css('#conference-data, #photo-map-data').each do |node|

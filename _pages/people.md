@@ -66,6 +66,7 @@ nav_order: 1
 {% if site.data.members.alumni.size > 0 %}
 <div class="members-group" id="alumni">
   <h2>Alumni</h2>
+  <div class="alumni-table-scroll" role="region" aria-label="Alumni" tabindex="0">
   <table class="alumni-table">
     <thead>
       <tr><th>Name</th><th>Position at 4ILab</th><th>Period</th><th>Current affiliation</th></tr>
@@ -81,6 +82,7 @@ nav_order: 1
       {% endfor %}
     </tbody>
   </table>
+  </div>
 </div>
 {% endif %}
 
