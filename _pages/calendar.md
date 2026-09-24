@@ -16,6 +16,7 @@ nav_order: 6.6
     달력은 <strong>공식 공지 날짜</strong> 기준입니다. AoE(UTC−12) 마감은 한국 시간으로 다음 날 20:59이며, 날짜만 발표된 일정은 시각을 임의로 지정하지 않았습니다. 발표 일정의 AoE 표기는 발표 시간 보장을 뜻하지 않습니다.</p>
   </div>
   <section id="calendar-interactive" hidden aria-label="월별 학회 달력">
+    <p class="calendar-today-summary"><time id="calendar-today-date" aria-live="polite"></time></p>
     <div class="calendar-controls">
       <div class="calendar-month-controls">
         <button type="button" id="calendar-prev" aria-label="이전 달">←</button>
