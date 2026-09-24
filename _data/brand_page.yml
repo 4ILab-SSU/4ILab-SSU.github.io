@@ -1,0 +1,80 @@
+en:
+  intro: We connect signals and information to build a clearer understanding of the world. Our research spans medical imaging, multimodal learning, speech processing, and deepfake detection.
+  direction_title: Our research, in one idea
+  direction: From incomplete measurements to reconstructed images, and from different modalities to shared meaning, we study how AI can reveal useful information. Precision, curiosity, connection, and clarity guide how we work and communicate.
+  name_title: Four I’s. One laboratory.
+  name_body: Integrated, Information, Intelligence, and Imaging give 4ILab its name. We write the abbreviation without spaces, with uppercase I and L.
+  logo_title: Signals meet intelligence
+  logo_body: Our original symbol joins a signal waveform to a network of six nodes. It represents the connection between information and learning. The original waveform, node arrangement, proportions, and different line weights are retained.
+  logo_caption: Original full-name logo designed for 4ILab
+  colors_title: Our signature colors
+  colors_intro: 4I Navy anchors our identity. Discovery Blue is reserved for links, selected states, and focused emphasis. The logo itself stays monochrome.
+  colors:
+    navy: Primary identity · logos, headings, and key backgrounds
+    blue: Accent · links, selected states, and research highlights
+    paper: Light background · websites and presentation slides
+    ink: Body text · explanations and tables
+    mist: Dividers · borders and supporting surfaces
+  downloads_title: Logos and editable files
+  downloads_intro: Choose a full-name logo for formal materials, a compact logo when space is limited, or the original symbol for small placements. White logos are intended for dark backgrounds.
+  full: Full-name logo
+  compact: Compact logo
+  original: Original artwork
+  navy: Navy SVG
+  white: White SVG
+  black: Black SVG
+  original_png: Original PNG
+  white_png: White PNG
+  pptx: Editable original PPTX
+  symbol: Symbol SVG
+  usage_title: Using the identity
+  rules:
+    - Preserve the original shape, line weights, and aspect ratio. Do not stretch, redraw, or add effects to the official logo.
+    - Leave clear space around the logo of at least twice a node’s diameter. Keep it away from busy photographs and edges.
+    - Use navy or black on a light background, and white on a dark background. Make sure the logo and small text remain easy to read.
+    - Place the signature on a cover or introductory section, separately from the official logo. Do not attach additional slogans to the artwork.
+    - At small sizes, use the original symbol without the full name. Increase its size if the network connections become indistinct.
+  graphics_title: A shared visual language
+  graphics_body: Use curves to describe signals and connections to show relationships. Supporting diagrams can use consistent line weights; this does not change the original logo. Four-part patterns may echo the four I’s when meaningful, without changing scientific data to fit the pattern.
+  imagery_body: Favor actual research results, comparisons, and photographs of our people at work. Explain concrete questions and evidence, and give both images and text room to breathe.
+  file_note: SVG wordmarks contain editable text. Check font rendering before print production. For the exact original artwork, use the PNG files or the PowerPoint source.
+ko:
+  intro: 서로 다른 신호와 정보를 연결해, 더 선명한 이해를 만드는 연구실입니다. 의료영상, 멀티모달 학습, 음성 처리, 딥페이크 탐지를 연구합니다.
+  direction_title: 우리의 연구가 향하는 곳
+  direction: 불완전한 측정에서 선명한 영상을 복원하고, 서로 다른 데이터에서 연결된 의미를 찾습니다. AI로 유용한 정보를 발견하는 과정에서 정밀함, 탐구심, 연결, 명료함을 추구합니다.
+  name_title: 네 개의 I, 하나의 연구실
+  name_body: Integrated, Information, Intelligence, Imaging의 네 I를 담아 4ILab이라고 부릅니다. 약칭에는 공백을 넣지 않으며 I와 L은 대문자로 표기합니다.
+  logo_title: 신호와 지능의 만남
+  logo_body: 직접 설계한 원본 심볼은 신호 파형과 6개 노드의 네트워크를 연결해 정보와 학습의 만남을 표현합니다. 파형의 곡선, 노드 배치, 비례와 서로 다른 선 두께를 원본대로 유지합니다.
+  logo_caption: 4ILab이 직접 설계한 전체 이름 포함형 원본 로고
+  colors_title: 연구실을 나타내는 색상
+  colors_intro: 대표색은 4I Navy입니다. Discovery Blue는 링크, 선택 상태와 중요한 내용을 강조할 때 사용합니다. 로고는 단색을 유지합니다.
+  colors:
+    navy: 대표색 · 로고, 제목, 주요 배경
+    blue: 보조색 · 링크, 선택 상태, 연구 결과 강조
+    paper: 밝은 배경 · 홈페이지와 발표 자료
+    ink: 본문색 · 설명과 표
+    mist: 구분색 · 경계선과 보조 배경
+  downloads_title: 로고와 편집 원본 다운로드
+  downloads_intro: 공식 자료에는 전체 이름 포함형을, 공간이 제한될 때는 간략형을 사용합니다. 작은 위치에는 원본 심볼을 사용하며, 흰색 로고는 어두운 배경에 배치합니다.
+  full: 전체 이름 포함형
+  compact: 간략형
+  original: 원본 파일
+  navy: 네이비 SVG
+  white: 흰색 SVG
+  black: 검정 SVG
+  original_png: 원본 PNG
+  white_png: 흰색 PNG
+  pptx: 편집 원본 PPTX
+  symbol: 심볼 SVG
+  usage_title: 사용 기준
+  rules:
+    - 원본의 형태, 선 두께와 종횡비를 유지합니다. 로고를 늘이거나 다시 그리거나 효과를 추가하지 않습니다.
+    - 로고 주변에는 최소 노드 지름 두 배의 여백을 둡니다. 복잡한 사진이나 가장자리에 붙이지 않습니다.
+    - 밝은 배경에는 네이비 또는 검정, 어두운 배경에는 흰색을 사용합니다. 로고와 작은 글자가 명확하게 읽히는지 확인합니다.
+    - 시그니처 문구는 표지나 소개 영역에서 공식 로고와 별도로 사용합니다. 로고 자체에 슬로건을 덧붙이지 않습니다.
+    - 작은 크기에서는 전체 이름을 제외한 원본 심볼을 사용합니다. 연결선이 구분되지 않으면 표시 크기를 키웁니다.
+  graphics_title: 함께 사용하는 시각 언어
+  graphics_body: 곡선은 신호를, 연결선은 정보의 관계를 표현합니다. 설명용 그래픽에서는 선 두께를 통일할 수 있지만 원본 로고에는 적용하지 않습니다. 네 개의 요소는 의미가 있을 때 활용하며, 과학 데이터를 네 개의 구획에 억지로 맞추지 않습니다.
+  imagery_body: 실제 연구 결과와 비교 이미지, 구성원의 연구·협업 사진을 활용합니다. 구체적인 질문과 근거를 설명하고, 이미지와 글 주변에 충분한 여백을 둡니다.
+  file_note: SVG의 글자는 편집 가능한 텍스트입니다. 인쇄 전 글꼴 표시를 확인하세요. 정확한 원본 형태가 필요한 경우 PNG 또는 PowerPoint 원본을 사용하세요.

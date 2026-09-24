@@ -31,7 +31,9 @@
 
 ## 로고 파일
 
-모든 배포용 로고는 투명 배경의 편집 가능한 SVG다.
+공개 안내 페이지: [/brand/](https://4ilab-ssu.github.io/brand/) · [한국어](https://4ilab-ssu.github.io/ko/brand/)
+
+원본 PNG·PPTX와 투명 배경의 편집 가능한 SVG를 제공한다.
 
 - `assets/img/logo/4ilab-full-navy.svg`: 전체 연구실명 포함
 - `assets/img/logo/4ilab-compact-navy.svg`: 심볼 + 4ILab
@@ -67,3 +69,5 @@
 번역은 `_data/i18n.yml`, 색상·레이아웃은 `_sass/_lab.scss`에서 관리한다.
 색상을 바꾸면 데이터 파일, 스타일과 이 가이드를 함께 갱신한다.
 웹 심볼은 `_includes/brand-mark.liquid`에 있으며 배포용 SVG와 형태를 함께 유지한다.
+
+공개 페이지의 본문은 `_data/brand_page.yml`에서 영어·한국어를 함께 관리한다.
