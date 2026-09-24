@@ -255,3 +255,8 @@ Ruby 를 직접 쓸 경우: `bundle install && bundle exec jekyll serve`.
 - 뉴스는 기존 `_news/*.md`에 영문을 작성하고, `_data/news_ko.yml`에 동일 파일명을 키로 한국어 Markdown을 입력합니다. 날짜·논문 링크 등은 두 언어에서 일치시켜 주세요.
 - 강의의 학기·학수번호·순서는 `_data/courses.yml`에서 관리합니다. 강의명 번역은 `_data/i18n.yml`에서 관리합니다. 같은 강의의 분반은 서로 다른 행으로 추가할 수 있습니다.
 - `npm run lint`로 데이터 문법을 검증합니다. 빌드 후 `bundle exec ruby scripts/validate-locales.rb`로 언어별 링크와 콘텐츠 수를 검사합니다. GitHub Actions에서도 자동 실행됩니다.
+
+
+## ブランド와 로고
+
+대표 색상·시그니처 문구·로고 사용법은 [브랜드 가이드](BRAND.md)를 참고하세요.

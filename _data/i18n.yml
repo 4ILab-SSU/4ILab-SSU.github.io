@@ -1,4 +1,5 @@
 en:
+  신호를 연결하고, 의미를 발견하다.: "From Signals to Understanding."
   홈: 'Home'
   구성원: 'members'
   연구: 'research'
@@ -445,6 +446,9 @@ en:
   학회 월별 일정표: 'Monthly conference schedule'
   4ILab 사진 앨범 장소 지도: 'Map of 4ILab photo album locations'
 ko:
+  From Signals to: "신호를 연결하고,"
+  Understanding.: "의미를 발견하다."
+  From Signals to Understanding.: "신호를 연결하고, 의미를 발견하다."
   Home: '홈'
   People: '구성원'
   Research: '연구'
