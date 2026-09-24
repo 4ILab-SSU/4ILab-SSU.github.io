@@ -333,3 +333,15 @@ html[data-theme="dark"] { --brand-mark-color: #fff; }
   .brand-intro { padding: 24px; }
   .brand-color > div:last-child { padding: 12px; }
 }
+
+// Give each publication category the same breathing room as research sections.
+.publication-section { margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--global-divider-color); }
+.publication-section > h2 { margin: 0 0 28px; font-size: 1.85rem; font-weight: 600; letter-spacing: -.5px; scroll-margin-top: 110px; }
+.publication-section .publications { margin-top: 0; }
+.publication-section .publications > h2.bibliography:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
+.publication-section > .talk-list > li, .publication-section > .patent-list > li { padding: 18px 0; line-height: 1.7; }
+.publication-section > .talk-list > li:first-child, .publication-section > .patent-list > li:first-child { padding-top: 0; }
+@media (max-width: 575px) {
+  .publication-section { margin-top: 40px; padding-top: 24px; }
+  .publication-section > h2 { margin-bottom: 22px; font-size: 1.6rem; }
+}

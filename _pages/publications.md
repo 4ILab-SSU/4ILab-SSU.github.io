@@ -20,18 +20,25 @@ nav_order: 3
   {% for v in site.data.venues %}<a href="{{ v[1].url | relative_url }}" class="publication-area-key" style="--area-color: {{ v[1].color }}"><strong>{{ v[0] }}</strong><span>{{ v[1].name }}</span></a>{% endfor %}
 </div>
 
+<section class="publication-section" aria-labelledby="conferences">
 <h2 id="conferences">Conferences &amp; Workshops</h2>
 
 <div class="publications">
   {% bibliography --query @inproceedings %}
 </div>
 
+</section>
+
+<section class="publication-section" aria-labelledby="journals">
 <h2 id="journals">Journals</h2>
 
 <div class="publications">
   {% bibliography --query @article %}
 </div>
 
+</section>
+
+<section class="publication-section" aria-labelledby="invited-talks">
 <h2 id="invited-talks">Invited Talks</h2>
 
 <ul class="talk-list">
@@ -44,6 +51,9 @@ nav_order: 3
   {% endfor %}
 </ul>
 
+</section>
+
+<section class="publication-section" aria-labelledby="patents">
 <h2 id="patents">Patents</h2>
 
 <ul class="patent-list">
@@ -56,3 +66,5 @@ nav_order: 3
     </li>
   {% endfor %}
 </ul>
+
+</section>
