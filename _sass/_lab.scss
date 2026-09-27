@@ -331,6 +331,14 @@ html[data-theme="dark"] { --brand-mark-color: #fff; }
 }
 
 // Give each publication category the same breathing room as research sections.
+.publication-archive { margin-top: 28px; }
+.publication-archive > summary { cursor: pointer; width: fit-content; padding: 12px 18px; border: 1px solid var(--global-divider-color); border-radius: 8px; color: var(--global-text-color); background: var(--global-card-bg-color); font-weight: 600; }
+.publication-archive > summary:focus-visible { outline: 3px solid var(--global-theme-color); outline-offset: 3px; }
+.publication-archive .archive-meta { font-weight: 400; font-size: .85em; }
+.publication-archive .archive-less, .publication-archive[open] .archive-more { display: none; }
+.publication-archive[open] .archive-less { display: inline; }
+.publication-archive-content { padding-top: 28px; }
+@media print { .publication-archive > summary { display: none; } .publication-archive::details-content { content-visibility: visible; } .publication-archive > .publication-archive-content { display: block !important; } }
 .publication-section { margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--global-divider-color); }
 .publication-section > h2 { margin: 0 0 28px; font-size: 1.85rem; font-weight: 600; letter-spacing: -.5px; scroll-margin-top: 110px; }
 .publication-section .publications { margin-top: 0; }

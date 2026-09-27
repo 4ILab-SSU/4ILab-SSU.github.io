@@ -1,0 +1,22 @@
+{% assign recent_items = '' %}{% assign older_items = '' %}{% assign older_count = 0 %}
+{% assign items = include.items | sort: 'date' | reverse %}
+{% for t in items %}
+  {% assign item_year = t.date | date: '%Y' | plus: 0 %}
+  {% capture row %}
+    <li>
+      <span class="item-title">"{{ t.title }}"</span><br>
+      <span class="item-meta">{{ t.speaker }} · {{ t.event }}{% if t.place %}, {{ t.place }}{% endif %} · {{ t.date | date: "%b %d, %Y" }}</span>
+    </li>
+  {% endcapture %}
+  {% if item_year <= include.year %}
+    {% assign older_items = older_items | append: row %}
+    {% assign older_count = older_count | plus: 1 %}
+  {% else %}
+    {% assign recent_items = recent_items | append: row %}
+  {% endif %}
+{% endfor %}
+{% if recent_items != '' %}<ul class="talk-list">{{ recent_items }}</ul>{% endif %}
+{% if older_count > 0 %}
+  {% capture older_content %}<ul class="talk-list">{{ older_items }}</ul>{% endcapture %}
+  {% include publication-archive.liquid content=older_content count=older_count year=include.year %}
+{% endif %}

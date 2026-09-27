@@ -7,7 +7,9 @@ nav: true
 nav_order: 3
 ---
 
-<!-- _pages/publications.md -->
+<!-- Five publication years, including the build year; older work remains in the HTML. -->
+{% assign archive_year = site.time | date: '%Y' | minus: 5 %}
+{% assign recent_year = archive_year | plus: 1 %}
 
 <p>
   <a class="link-pill" href="#conferences">Conferences</a>
@@ -24,7 +26,13 @@ nav_order: 3
 <h2 id="conferences">Conferences &amp; Workshops</h2>
 
 <div class="publications">
-  {% bibliography --query @inproceedings %}
+  {% bibliography --query @inproceedings[year >= {{recent_year}}] %}
+  {% capture older_count %}{% bibliography_count --query @inproceedings[year <= {{archive_year}}] %}{% endcapture %}
+  {% assign older_count = older_count | plus: 0 %}
+  {% if older_count > 0 %}
+    {% capture older_content %}{% bibliography --query @inproceedings[year <= {{archive_year}}] %}{% endcapture %}
+    {% include publication-archive.liquid content=older_content count=older_count year=archive_year %}
+  {% endif %}
 </div>
 
 </section>
@@ -33,7 +41,13 @@ nav_order: 3
 <h2 id="journals">Journals</h2>
 
 <div class="publications">
-  {% bibliography --query @article %}
+  {% bibliography --query @article[year >= {{recent_year}}] %}
+  {% capture older_count %}{% bibliography_count --query @article[year <= {{archive_year}}] %}{% endcapture %}
+  {% assign older_count = older_count | plus: 0 %}
+  {% if older_count > 0 %}
+    {% capture older_content %}{% bibliography --query @article[year <= {{archive_year}}] %}{% endcapture %}
+    {% include publication-archive.liquid content=older_content count=older_count year=archive_year %}
+  {% endif %}
 </div>
 
 </section>
@@ -41,30 +55,13 @@ nav_order: 3
 <section class="publication-section" aria-labelledby="invited-talks">
 <h2 id="invited-talks">Invited Talks</h2>
 
-<ul class="talk-list">
-  {% assign talks = site.data.talks | sort: "date" | reverse %}
-  {% for t in talks %}
-    <li>
-      <span class="item-title">"{{ t.title }}"</span><br>
-      <span class="item-meta">{{ t.speaker }} · {{ t.event }}{% if t.place %}, {{ t.place }}{% endif %} · {{ t.date | date: "%b %d, %Y" }}</span>
-    </li>
-  {% endfor %}
-</ul>
+{% include publication-talks.liquid items=site.data.talks year=archive_year %}
 
 </section>
 
 <section class="publication-section" aria-labelledby="patents">
 <h2 id="patents">Patents</h2>
 
-<ul class="patent-list">
-  {% assign patents = site.data.patents | sort: "date" | reverse %}
-  {% for p in patents %}
-    <li>
-      <span class="status-badge {{ p.country | downcase }}">{{ p.country }}</span><span class="status-badge {{ p.status }}">{{ p.status }}</span>
-      <span class="item-title">{% if p.url %}<a href="{{ p.url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</span><br>
-      <span class="item-meta">{{ p.inventors }} · {{ p.number }}{% if p.assignee %} · {{ p.assignee }}{% endif %} · {{ p.date | date: "%b %d, %Y" }}</span>
-    </li>
-  {% endfor %}
-</ul>
+{% include publication-patents.liquid items=site.data.patents year=archive_year %}
 
 </section>
