@@ -17,7 +17,7 @@ nav_order: 4
   {% for g in ongoing %}
     <li>
       <span class="status-badge">on-going</span><span class="item-title">{{ g.title }}</span><br>
-      <span class="item-meta">{{ g.agency }}{% if g.ministry %}, {{ g.ministry }}{% endif %} · {{ g.start }} – {{ g.end }}{% if g.role %} · {{ g.role }}{% endif %}</span>
+      <span class="item-meta"><span>{{ g.agency }}</span>{% if g.ministry %}, <span>{{ g.ministry }}</span>{% endif %} · {{ g.start }}{% if g.end != g.start %} – {{ g.end }}{% endif %}{% if g.role %} · <span>{{ g.role }}</span>{% endif %}</span>
     </li>
   {% endfor %}
 </ul>
@@ -32,7 +32,7 @@ nav_order: 4
   {% for g in completed %}
     <li>
       <span class="status-badge completed">completed</span><span class="item-title">{{ g.title }}</span><br>
-      <span class="item-meta">{{ g.agency }}{% if g.ministry %}, {{ g.ministry }}{% endif %} · {{ g.start }} – {{ g.end }}{% if g.role %} · {{ g.role }}{% endif %}</span>
+      <span class="item-meta"><span>{{ g.agency }}</span>{% if g.ministry %}, <span>{{ g.ministry }}</span>{% endif %} · {{ g.start }}{% if g.end != g.start %} – {{ g.end }}{% endif %}{% if g.role %} · <span>{{ g.role }}</span>{% endif %}</span>
     </li>
   {% endfor %}
 </ul>

@@ -4,8 +4,8 @@
 #   title    : project title (Korean or English)
 #   agency   : funding agency (e.g. 한국연구재단)
 #   ministry : ministry / sponsor
-#   start    : YYYY.MM.DD
-#   end      : YYYY.MM.DD
+#   start    : YYYY.MM.DD (or YYYY when only the participation year is known)
+#   end      : YYYY.MM.DD (or YYYY)
 #   role     : PI / Co-PI / Participant (optional)
 #   status   : ongoing | completed   (ongoing ones are listed first)
 # =============================================================================
@@ -46,8 +46,8 @@
   status: completed
 
 - title: 기초과학융합연구소
-  agency: 한국연구재단
-  ministry: 교육부
-  start: 2021.06.01
-  end: 2030.05.31
-  status: ongoing
+  agency: 숭실대학교
+  start: "2025"
+  end: "2025"
+  role: 참여 (교내 과제)
+  status: completed

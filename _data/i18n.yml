@@ -1,4 +1,6 @@
 en:
+  기초과학융합연구소: 'Institute for Basic Science Convergence'
+  참여 (교내 과제): 'Participant (internal university project)'
   마카오 ICEIC 2026 학회 현장: 'ICEIC 2026 conference in Macau'
   신호를 연결하고, 의미를 발견하다.: "From Signals to Understanding."
   홈: 'Home'
@@ -447,6 +449,8 @@ en:
   학회 월별 일정표: 'Monthly conference schedule'
   4ILab 사진 앨범 장소 지도: 'Map of 4ILab photo album locations'
 ko:
+  Institute for Basic Science Convergence: '기초과학융합연구소'
+  Participant (internal university project): '참여 (교내 과제)'
   Show more: '더보기'
   Show less: '접기'
   and earlier: '및 이전'
