@@ -1,4 +1,5 @@
 en:
+  (산학 과제): '(Industry–university project)'
   고정형 희소뷰 CT 시스템에서의 인공신경망 기반 영상재구성에 관한 연구: 'Neural Network-Based Image Reconstruction for a Stationary Sparse-View CT System'
   주식회사에스에스티랩: 'SST Lab Co., Ltd.'
   기초과학융합연구소: 'Institute for Basic Science Convergence'
@@ -451,6 +452,7 @@ en:
   학회 월별 일정표: 'Monthly conference schedule'
   4ILab 사진 앨범 장소 지도: 'Map of 4ILab photo album locations'
 ko:
+  (Industry–university project): '(산학 과제)'
   Neural Network-Based Image Reconstruction for a Stationary Sparse-View CT System: '고정형 희소뷰 CT 시스템에서의 인공신경망 기반 영상재구성에 관한 연구'
   SST Lab Co., Ltd.: '주식회사에스에스티랩'
   Institute for Basic Science Convergence: '기초과학융합연구소'
