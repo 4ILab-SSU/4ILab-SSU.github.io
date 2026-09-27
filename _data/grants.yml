@@ -51,3 +51,10 @@
   end: "2025"
   role: 참여 (교내 과제)
   status: completed
+
+- title: 고정형 희소뷰 CT 시스템에서의 인공신경망 기반 영상재구성에 관한 연구
+  agency: 주식회사에스에스티랩
+  start: 2024.05.13
+  end: 2024.12.31
+  role: 연구책임자 한요섭
+  status: completed
