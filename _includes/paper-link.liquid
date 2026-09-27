@@ -1,0 +1,24 @@
+{%- assign paper = include.entry -%}
+{%- assign paper_url = nil -%}
+{%- if paper.pdf and paper.pdf != '' -%}
+  {%- if paper.pdf contains '://' -%}
+    {%- assign paper_url = paper.pdf -%}
+  {%- else -%}
+    {%- assign paper_url = paper.pdf | prepend: '/assets/pdf/' | relative_url -%}
+  {%- endif -%}
+{%- elsif paper.arxiv and paper.arxiv != '' -%}
+  {%- assign paper_url = paper.arxiv | prepend: 'https://arxiv.org/abs/' -%}
+{%- elsif paper.doi and paper.doi != '' -%}
+  {%- assign paper_url = paper.doi | prepend: 'https://doi.org/' -%}
+{%- elsif paper.html and paper.html != '' -%}
+  {%- if paper.html contains '://' -%}
+    {%- assign paper_url = paper.html -%}
+  {%- else -%}
+    {%- assign paper_url = paper.html | prepend: '/assets/html/' | relative_url -%}
+  {%- endif -%}
+{%- elsif paper.hal and paper.hal != '' -%}
+  {%- assign paper_url = paper.hal | prepend: 'https://hal.science/' -%}
+{%- endif -%}
+{%- if paper_url -%}
+  <a href="{{ paper_url | escape }}" class="paper-link btn btn-sm z-depth-0">View paper</a>
+{%- endif -%}

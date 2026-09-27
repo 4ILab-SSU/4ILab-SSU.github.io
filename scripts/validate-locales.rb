@@ -45,11 +45,19 @@ files.each do |file|
   end
   checked += 1
 end
-expected_papers = BibTeX.open(File.join(root, '_bibliography/papers.bib')).entries.values.count { |entry| %w[article inproceedings].include?(entry.type.to_s.downcase) }
+paper_entries = BibTeX.open(File.join(root, '_bibliography/papers.bib')).entries.values.select { |entry| %w[article inproceedings].include?(entry.type.to_s.downcase) }
+expected_papers = paper_entries.length
 %w[en ko].each do |lang|
   dir = lang == 'en' ? site : File.join(site, 'ko')
   papers = Nokogiri::HTML(File.read(File.join(dir, 'publications/index.html')))
   check.call(papers.css('.research-area-badge').length == expected_papers, "Missing papers in #{lang}")
+  paper_entries.each do |entry|
+    row = papers.at_css("[id='#{entry.key}']")
+    has_link = %i[pdf arxiv doi html hal].any? { |field| !entry[field].to_s.empty? }
+    check.call(row && row.css('.paper-link').length == (has_link ? 1 : 0), "Paper link count: #{entry.key} in #{lang}")
+    check.call(row.css('.links a').none? { |a| %w[PDF DOI HTML arXiv HAL].include?(a.text.strip) }, "Separate paper buttons returned: #{entry.key}")
+    row.css('.paper-link').each { |a| check.call(a.text.strip == (lang == 'ko' ? '논문 보기' : 'View paper'), "Paper button language: #{entry.key}") }
+  end
   check.call(papers.css('input[placeholder="Type to filter"]').empty?, "Filter returned in #{lang}")
   teaching = Nokogiri::HTML(File.read(File.join(dir, 'teaching/index.html')))
   terms = teaching.css('.course-term')
