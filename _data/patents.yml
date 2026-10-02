@@ -8,6 +8,14 @@
 #   date      : YYYY-MM-DD (registration or filing date)
 #   url       : (optional) link to the certificate / patent office page
 
+- inventors: 한요섭, 하현진, 이정민
+  title: 안구 궤적에 기반한 시선 추적 장치 및 방법
+  assignee: 숭실대학교산학협력단
+  country: KR
+  number: 10-2026-0062047
+  status: pending
+  date: 2026-04-06
+
 - inventors: 이교구, 오유리, 심재헌, 배준현, 한요섭
   title: 오디오-텍스트 검색을 위한 큐 기반 대조 학습 방법 및 이를 위한 컴퓨터 장치
   assignee: 서울대학교 산학협력단, 숭실대학교 산학협력단
