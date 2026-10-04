@@ -111,7 +111,7 @@
           scholar: https://scholar.google.com/citations?user=XXXX
 ```
 
-- 해당 그룹(`Postdoctoral Researchers`, `Graduate Students`, `Undergraduate Researchers & Interns`)의 `members:` 아래에 붙여넣기. **들여쓰기(공백 개수)를 위 항목과 똑같이** 맞추세요. 탭 문자는 사용 금지.
+- 해당 그룹(`Postdoctoral Researchers`, `Ph.D. Students`, `M.S. Students`, `Undergraduate Researchers & Interns`)의 `members:` 아래에 붙여넣기. **들여쓰기(공백 개수)를 위 항목과 똑같이** 맞추세요. 탭 문자는 사용 금지.
 - 팀 리더는 `leader: true` 를 추가하면 ⭐ 이 붙습니다.
 - **사진**: 정사각형(최소 400×400) jpg/png, 파일명은 소문자-하이픈 (`gildong-hong.jpg`). `assets/img/members/` 에 업로드.
 - **졸업**: 위 그룹에서 블록을 지우고 파일 맨 아래 `alumni:` 에 옮깁니다.

@@ -66,9 +66,8 @@ groups:
         links:
           github: https://github.com/soungsill
 
-  - title: Graduate Students
-    id: graduate
-    note: "⭐ marks the leader of a research team."
+  - title: Ph.D. Students
+    id: phd
     members:
       - name: Abdul Wasay Sardar
         role: Ph.D. Student
@@ -79,6 +78,11 @@ groups:
         interests: [Deepfake Detection, Federated Learning]
         links:
           scholar: https://scholar.google.com/citations?user=nnRFQuoAAAAJ
+
+  - title: M.S. Students
+    id: ms
+    note: "⭐ marks the leader of a research team."
+    members:
       - name: Jungmin Lee
         role: M.S. Student
         name_ko: 이정민
