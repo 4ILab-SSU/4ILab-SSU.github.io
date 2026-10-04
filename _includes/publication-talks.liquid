@@ -1,22 +1,30 @@
-{% assign recent_items = '' %}{% assign older_items = '' %}{% assign older_count = 0 %}
-{% assign items = include.items | sort: 'date' | reverse %}
-{% for t in items %}
-  {% assign item_year = t.date | date: '%Y' | plus: 0 %}
-  {% capture row %}
-    <li>
-      <span class="item-title">"{{ t.title }}"</span><br>
-      <span class="item-meta">{{ t.speaker }} · {{ t.event }}{% if t.place %}, {{ t.place }}{% endif %} · {{ t.date | date: "%b %d, %Y" }}</span>
-    </li>
-  {% endcapture %}
-  {% if item_year <= include.year %}
-    {% assign older_items = older_items | append: row %}
-    {% assign older_count = older_count | plus: 1 %}
-  {% else %}
-    {% assign recent_items = recent_items | append: row %}
-  {% endif %}
-{% endfor %}
-{% if recent_items != '' %}<ul class="talk-list">{{ recent_items }}</ul>{% endif %}
-{% if older_count > 0 %}
-  {% capture older_content %}<ul class="talk-list">{{ older_items }}</ul>{% endcapture %}
-  {% include publication-archive.liquid content=older_content count=older_count year=include.year %}
-{% endif %}
+{%- comment -%} Invited talks grouped by year, matching the year headings of the paper lists. {%- endcomment -%}
+{%- assign recent_groups = '' -%}{%- assign older_groups = '' -%}{%- assign older_count = 0 -%}
+{%- assign items = include.items | sort: 'date' | reverse -%}
+{%- assign groups = items | group_by_exp: 'item', "item.date | date: '%Y'" -%}
+{%- for g in groups -%}
+  {%- assign group_year = g.name | plus: 0 -%}
+  {%- capture block -%}
+<h2 class="bibliography">{{ g.name }}</h2>
+<ul class="talk-list">
+  {%- for t in g.items %}
+  <li>
+    <span class="item-title">"{{ t.title }}"</span><br>
+    <span class="item-meta">{{ t.speaker }} · {{ t.event }}{% if t.place %}, {{ t.place }}{% endif %} · {{ t.date | date: "%b %d, %Y" }}</span>
+  </li>
+  {%- endfor %}
+</ul>
+  {%- endcapture -%}
+  {%- if group_year <= include.year -%}
+    {%- assign older_groups = older_groups | append: block -%}
+    {%- assign older_count = older_count | plus: g.size -%}
+  {%- else -%}
+    {%- assign recent_groups = recent_groups | append: block -%}
+  {%- endif -%}
+{%- endfor -%}
+<div class="publications">
+{{ recent_groups }}
+{%- if older_count > 0 %}
+  {% include publication-archive.liquid content=older_groups count=older_count year=include.year %}
+{%- endif %}
+</div>
