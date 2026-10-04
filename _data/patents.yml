@@ -2,11 +2,35 @@
 #   inventors : comma-separated
 #   title     : patent title
 #   assignee  : (optional)
-#   country   : KR | US
+#   country   : KR | US | PCT (an overseas filing of the same invention gets its own entry)
 #   number    : registration or application number
 #   status    : registered | pending
 #   date      : YYYY-MM-DD (registration or filing date)
 #   url       : (optional) link to the certificate / patent office page
+
+- inventors: Yoseob Han, Kanghyun Ryu, Minkyu Kim
+  title: Apparatus and method for medical imaging segmentation
+  assignee: Foundation of Soongsil University-Industry Cooperation
+  country: US
+  number: US 19/738,176
+  status: pending
+  date: 2026-07-10
+
+- inventors: Yoseob Han, Minkyo Jung
+  title: Deep learning-based low-dose CT image reconstruction system
+  assignee: Foundation of Soongsil University-Industry Cooperation
+  country: US
+  number: US 19/691,640
+  status: pending
+  date: 2026-05-29
+
+- inventors: Yoseob Han, Minkyo Jung
+  title: Self-supervised learning-based sparse-view CT image reconstruction method and apparatus
+  assignee: Foundation of Soongsil University-Industry Cooperation
+  country: US
+  number: US 19/661,899
+  status: pending
+  date: 2026-04-29
 
 - inventors: 한요섭, 하현진, 이정민
   title: 안구 궤적에 기반한 시선 추적 장치 및 방법
@@ -16,13 +40,21 @@
   status: pending
   date: 2026-04-06
 
+- inventors: 한요섭, 류강현, 김민규
+  title: 의료 영상 분할 장치 및 그것의 동작 방법
+  assignee: 숭실대학교산학협력단
+  country: PCT
+  number: PCT/KR2026/001635
+  status: pending
+  date: 2026-01-28
+
 - inventors: 이교구, 오유리, 심재헌, 배준현, 한요섭
   title: 오디오-텍스트 검색을 위한 큐 기반 대조 학습 방법 및 이를 위한 컴퓨터 장치
   assignee: 서울대학교 산학협력단, 숭실대학교 산학협력단
   country: KR
   number: 10-2025-0194175
   status: pending
-  date: 2025-12-01
+  date: 2025-12-09
 
 - inventors: 한요섭, 오유리, 이건우
   title: 무음 비디오 기반의 음성 합성 장치 및 그 동작 방법
@@ -38,7 +70,7 @@
   country: KR
   number: 10-2025-0074750
   status: pending
-  date: 2025-06-01
+  date: 2025-06-09
 
 - inventors: 한요섭, 류강현, 김민규
   title: 의료 영상 분할 장치 및 그것의 동작 방법
@@ -46,7 +78,7 @@
   country: KR
   number: 10-2025-0096474
   status: pending
-  date: 2025-07-01
+  date: 2025-07-17
 
 - inventors: 한요섭, 정민교
   title: 자기지도 학습 기반 희소뷰 CT 영상 재구성 방법 및 장치
@@ -54,7 +86,7 @@
   country: KR
   number: 10-2025-0099401
   status: pending
-  date: 2025-07-01
+  date: 2025-07-23
 
 - inventors: Jong Chul Ye, Yoseob Han
   title: Method for processing sparse-view computed tomography image using neural network and apparatus therefor

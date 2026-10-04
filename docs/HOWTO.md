@@ -182,7 +182,7 @@ note: "* equal contribution"
 
 - `_data/grants.yml` — `status: ongoing` 이면 "On-going", `completed` 면 "Completed" 로 나뉩니다.
 - `_data/talks.yml` — 날짜 내림차순 자동 정렬.
-- `_data/patents.yml` — `country: KR|US`, `status: registered|pending`.
+- `_data/patents.yml` — `country: KR|US|PCT`, `status: registered|pending`.
 - `_data/courses.yml` — 학기 블록을 맨 위에 추가.
 
 ---
