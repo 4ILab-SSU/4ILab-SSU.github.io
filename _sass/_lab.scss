@@ -115,6 +115,9 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--global-theme-co
 .research-spotlight { display: grid; grid-template-columns: .9fr 1.1fr; gap: 75px; background: #10385f; color: #f7f9fc; padding: 55px; border-radius: 8px; }
 .research-spotlight .section-label { color: #c2d4ff; }
 .spotlight-intro h2 { font-size: clamp(2.5rem, 4vw, 3.6rem); font-weight: 500; }
+// Korean headings break between words, not characters, and the Korean spotlight line is longer than the English one.
+.spotlight-intro h2, .people-copy h2, .section-heading h2, .home-join h2 { word-break: keep-all; }
+html[lang="ko"] .spotlight-intro h2 { font-size: clamp(2.2rem, 3.3vw, 3rem); }
 .spotlight-intro > p:not(.section-label) { color: #c4d3eb; font-size: 13px; max-width: 270px; margin: 20px 0; }
 .research-spotlight .text-link { color: #dce7ff; }
 .spotlight-papers { display: flex; flex-direction: column; justify-content: center; }
@@ -202,6 +205,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--global-theme-co
   .spotlight-intro h2 { font-size: 2.6rem; }
   .spotlight-intro h2 br { display: none; }
   .spotlight-intro h2 { max-width: 260px; }
+  html[lang="ko"] .spotlight-intro h2 { font-size: 2.2rem; max-width: 300px; }
   .spotlight-paper h3 { font-size: 26px; }
   .people-story { grid-template-columns: 1fr; gap: 28px; }
   .people-story figure img { aspect-ratio: 1.45; }
